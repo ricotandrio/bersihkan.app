@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 1.2vw;
+}
+
+main {
+    position: relative;
+    top: 1vw;
+    width: 100%;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+}
+
+.main_container {
+    position: relative;
+    width: 97%;
+    color: black;
+    padding: 1vw;
+    border: 1px solid black;
+    /* height: auto; */
+}
+
+.text_title_container{
+    position: relative;
+    width: 100% - 10vw;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.text_title {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    align-items: end;
+    display: inline-block;
+
+}
+
+.text_title h1 {
+    position: relative;
+    font-size: 2rem;
+    width: 80%;
+    margin-bottom: 3vw;
+    font-weight: 500;
+}
+
+.text_title p {
+    position: relative;
+    width: 40%;
+    left: 60%;
+    font-weight: 500;
+    opacity: 70%;
+}
+
+.img_container {
+    width: 100%;
+    background-image: url("../asset/austin-distel-rxpThOwuVgE-unsplash.jpg");
+    background-size: cover;
+    background-position: 20%;
+    height: 50vw;
+}
+
+.container_next {
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.line {
+    height: 0.2em;
+    border-radius: 1em;
+    background-color: black;
+    margin: 3vw;
+    width: 90%;
+}
+
+.container_next_text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: center;
+}
+
+.left_text {
+    position: relative;
+    padding: 5vw;
+    display: inline-block;
+}
+
+.right_text {
+    width: 50% - 2vw;
+    padding: 2vw;
+    text-align: justify;
+}
+
+.container_next_next {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+.box_next {
+    padding: 3vw;
+    width: 20%;
+    border-radius: 1vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box_container {
+    margin-top: 2vw;
+    margin-bottom: 10vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vw;
+}
+
+@media all and (max-width: 768px){
+    .text_title {
+        width: 90%;
+    }
+
+    .text_title p {
+        width: 100%;
+        left: 0;
+    }
+
+    .text_title h1 {
+        width: 100%
+    }
+}
