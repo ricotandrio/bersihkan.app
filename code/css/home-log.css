@@ -1,0 +1,194 @@
+.main_container{
+    border: solid;
+    position: relative;
+    background-color: #FAEDCD;
+}
+
+.user-info{
+    position: relative;
+    padding-top: 1vw;
+    padding-left: 10vw;
+    padding-bottom: 13vw;
+}
+
+
+.username h1{
+    transition: all 0s;
+    font-weight: bold;
+}
+
+.username p{
+    position:absolute;
+    top : 2.5vw;
+    left: 37vw;
+    width: 5.5vw;
+    border-radius: 1vw;
+    background-color: rgb(196, 195, 195);
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.recycle-bar{
+    background-color: grey;
+    border-radius: 1vw;
+    width: 40vw;
+}
+
+.recycle-bar p{
+    position: absolute;
+    top: 6.8vw;
+    left: 42.5vw;
+}
+
+.recycle-progress{
+    background-color: greenyellow;
+    border-radius: 1vw;
+    width: 30vw;
+    height: 2vw;
+}
+
+.options{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.options h1, .options p{
+    margin-left: 2vw;
+    color: white;
+}
+
+.options h1{
+    font-size: 1.5rem;
+}
+
+.options p{
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+
+.recycle, .redeem, .forum{
+    top: 16vw;
+    position: absolute;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 2vw;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.recycle:hover, .redeem:hover, .forum:hover{
+    background-color: white;
+    height: 20vw;
+}
+
+.recycle{
+    background-color: #3F0071;
+    left: 10vw;
+}
+
+.recycle:hover p, .recycle:hover h1{
+    color: black;
+}
+
+.redeem{
+    background-color: #FB2576;
+}
+
+.redeem:hover{
+    background-color: white;
+    height: 20vw;
+}
+
+.redeem:hover p, .redeem:hover h1{
+    color: black;
+}
+
+.forum{
+    background-color: #1315E5;
+    right: 10vw;
+}
+
+.forum:hover{
+    background-color: white;
+    height: 20vw;
+}
+
+.forum:hover p, .forum:hover h1{
+    color: black;
+}
+
+
+.bottom-half{
+    display: flex;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    background-color: white;
+    padding-top: 15vw;
+}
+
+.bottom-half h1{
+    font-weight: 1000;
+    font-size: 1.5rem;
+}
+
+.keuntungan{
+    padding-left: 10vw;
+    flex: 1;
+}
+
+.balance{
+    display: flex;
+    border: solid;
+    border-color: black;
+    border-radius: 0.5vw;
+    border-width: 0.1vw;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.5);
+    width: 30vw;
+    height: 4vw;
+    align-items: start;
+    flex-direction: column;
+    padding-top: 0.5vw;
+}
+
+.balance p, .balance h2{
+    margin: 0 0 0 0.5vw;
+    padding: 0;
+}
+
+.balance p{
+    font-size: 0.6rem;
+}
+
+.balance h2{
+    font-size: 1.3rem;
+}
+
+.permintaan{
+    flex: 1;
+    width: 25vw;
+    padding-bottom: 4vw;
+}
+
+.orders{
+    border: solid;
+    border-color: black;
+    border-radius: 0.5vw;
+    border-width: 0.1vw;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.5);
+
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 20vw;
+}
+
+.orders img{
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    height: 3vw;
+    width: 3vw;
+}
