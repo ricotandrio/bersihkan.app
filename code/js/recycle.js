@@ -3,7 +3,7 @@ var temp = document.getElementById('recycle-list-container');
 
 document.getElementById('recycle-form').addEventListener('submit', (event) => {
     event.preventDefault();
-    const location = document.getElementById('address').value;
+    const place = document.getElementById('address').value;
     const date = document.getElementById('date').value;
     const weight = document.getElementById('weight').value;
     const notes = document.getElementById('notes').value;
@@ -16,25 +16,29 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
 
     var currentDate = new Date();
     var userDate = new Date(date);
-    if(userDate <= currentDate){
-        alert(`Pick up date must be greater than ${currentDate}`);
-        return;
-    }
+    // if(userDate <= currentDate){
+    //     alert(`Pick up date must be greater than ${currentDate}`);
+    //     return;
+    // }
 
     if(!check){
         alert("You must be responsible for the information");
         return;
     }
 
+    var progress;
+    if(userDate < currentDate) progress = "confirmation";
+    else progress = "process";
+
     let pointPlus = Math.floor(weight * 1000);
-    loggedIn.order.push({"pointPlus": pointPlus, "location": location, "date": date, "weight": weight, "notes": notes});
+    loggedIn.order.push({"pointPlus": pointPlus, "place": place, "date": date, "weight": weight, "notes": notes});
     if(!localStorage.getItem('order_data')){
         var orderData = [];
-        orderData.push({"location": location, "date": date, "weight": weight, "email": loggedIn.email, "notes": notes});
+        orderData.push({"place": place, "date": date, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});
         localStorage.setItem('order_data', JSON.stringify(orderData));
     } else{
         var orderData = JSON.parse(localStorage.getItem('order_data'));
-        orderData.push({"location": location, "date": date, "weight": weight, "email": loggedIn.email, "notes": notes});
+        orderData.push({"place": place, "date": date, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});
         localStorage.setItem('order_data', JSON.stringify(orderData));
     }
 
@@ -76,7 +80,7 @@ function showList(){
         for (let i = 0; i < loggedIn.order.length; i++) {
             temp.innerHTML += `<div class="recycle-list">
                                     <div class="information">${loggedIn.order[i].date}</div>
-                                    <div class="information">${loggedIn.order[i].location}</div>
+                                    <div class="information">${loggedIn.order[i].place}</div>
                                     <div class="information">${loggedIn.order[i].weight} kg</div>
                                     <div class="information">${loggedIn.order[i].notes}</div>
                                     <button onclick="cancelOrder(${i})">Cancel</button>
