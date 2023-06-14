@@ -65,7 +65,7 @@ main {
 }
 
 .done_card {
-    background-color: #8BC34A;
+    background-color: #c8ef1a;
 }
 
 .card button {
@@ -76,7 +76,7 @@ main {
     border-radius: 1em;
     border: transparent;
     transition: ease-in-out 0.2s;
-    background-color: #D1E7DD;
+    background-color: #f2f2f2;
 }
 
 .card button:hover {
@@ -165,7 +165,7 @@ main {
 }
 
 .done:hover {
-    background-color: #8BC34A;
+    background-color: #c8ef1a;
 }
 
 .cancel:hover {

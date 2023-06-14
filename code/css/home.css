@@ -148,6 +148,7 @@ footer {
     margin-left: 2vw;
     border-radius: 2vw;
     border: transparent;
+    background-color: #c8ef1a;
 }
 
 .footer_top_left {
@@ -310,6 +311,7 @@ main {
 
 .about-us-text, .our-service-text, .partner-text {
     opacity: 60%;
+    transition: linear 0.5s;
 }
 
 #about-us:checked ~ .select .about-us-text, #our-service:checked ~ .select .our-service-text, #partner:checked ~ .select .partner-text{
@@ -321,7 +323,7 @@ main {
 .divider{
     margin: 0.3em 0 0 0vw;
     height: 0.2vw;
-    width: 300%;
+    width: 250%;
     background-color: black;
     opacity: 50%;
 }
@@ -337,7 +339,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 40vw;
+    /* height: 40vw; */
     align-items: center;
     padding-bottom: 20vw;
     padding-top: 5vw;
@@ -349,7 +351,7 @@ main {
 
 .main-info{
     margin-top: 1vw;
-    height: 30vw;
+    /* height: 30vw; */
     width: 80vw;
 }
 
@@ -361,19 +363,19 @@ main {
 
 .main-info img{
     object-fit: contain;
-    height: 20vw;
+    /* height: 20vw; */
     width: 20vw;
 }
 
 .info-text-1, .info-text-3{
     padding-left: 2vw;
-    height: 18vw;
+    /* height: 18vw; */
     flex: 1;
 }
 
 .info-text-2{
     padding-right: 2vw;
-    height: 18vw;
+    /* height: 18vw; */
     flex: 1;
     text-align: right;
 }

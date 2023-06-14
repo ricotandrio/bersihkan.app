@@ -78,7 +78,7 @@ main {
 }
 
 .form_container form button:hover {
-    border: 1px solid black;
+    box-shadow: 0 0 3vw rgba(200, 239, 26, 1);
 }
 
 .with_google {

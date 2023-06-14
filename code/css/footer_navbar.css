@@ -70,20 +70,21 @@ nav {
 nav ul li {
     list-style-type: none;
     margin: 1em 0 1em 0;
-    transition: linear 0.3s;
     opacity: 70%;
     font-weight: 700;
 }
 
 nav ul li a {
     text-decoration: none;
+    transition: linear 0.3s;
     color: black;
     font-size: 1.3rem;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
     padding-left: 1vw;
     opacity: 100%;
+    color: #38990b;
 }
 
 #burger_icon {
@@ -146,6 +147,7 @@ footer {
     margin-left: 2vw;
     border-radius: 2vw;
     border: transparent;
+    background-color: #c8ef1a;
 }
 
 .footer_top_left {
