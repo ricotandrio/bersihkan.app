@@ -31,12 +31,12 @@ function signUp() {
     window.alert("STOP")
 }
 
-// for (var i = 0; i < localStorage.length; i++) {
-//     var key = localStorage.key(i);
-//     var value = localStorage.getItem(key);
-//     console.log(key + ": " + value);
-// }
-// console.log(JSON.parse(data_user_storage).length);
+for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    var value = localStorage.getItem(key);
+    console.log(key + ": " + value);
+}
+console.log(JSON.parse(data_user_storage).length);
 
 // function login(){
 //     let email = document.getElementById('email').value;
@@ -57,10 +57,11 @@ function login(){
     var temp_data = JSON.parse(data_user_storage);
     for(let i = 0; i < temp_data.length; i++){
 
-        console.log(temp_data[i].email, temp_data[i].pass)
-        if(email == temp_data[i].email && pass == temp_data[i].pass){
+        console.log(temp_data[i].email + " " + temp_data[i].password)
+        if(email === temp_data[i].email && pass === temp_data[i].password){
             window.location.href = "../html/home-logged-in.html";
             window.alert("login");
+            return;
         }
     }
     window.alert("not found");
