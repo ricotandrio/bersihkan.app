@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 1.2vw;
+}
+
+main {
+    position: relative;
+    top: 1vw;
+    width: 100%;
+    padding-bottom: 6vw;
+}
+
+.main_container {
+    width: 97%;
+    color: black;
+    padding: 1vw;
+    /* border: 1px solid black; */
+}
+
+.title_bar {
+    padding-left: 2vw;
+}
+
+.input_container {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.form_container {
+    width: 100%;
+}
+
+.form_container form {
+    width: 50%;
+    display: flex;
+    border: 1px solid black;
+}
