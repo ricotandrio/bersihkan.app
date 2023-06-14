@@ -26,7 +26,7 @@ function signUp() {
     temp_user_data.push({ "name": nama, "email": email, "password": pass, "point": 100000});
     localStorage.setItem("user_data", JSON.stringify(temp_user_data));
     console.log("Data is added" + object);
-    window.alert("STOP")
+    window.alert("STOP");
 }
 
 for (var i = 0; i < localStorage.length; i++) {
@@ -55,7 +55,6 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
 
     var temp_data = JSON.parse(data_user_storage);
     for(let i = 0; i < temp_data.length; i++){
-
         console.log(temp_data[i].email + " " + temp_data[i].password);
         if(email === temp_data[i].email && pass === temp_data[i].password && email === "user@gmail.com"){
             localStorage.setItem("userLogin", JSON.stringify(temp_data[i]));
@@ -67,7 +66,11 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
             window.alert("login");
             window.location.href = "home-logged-in.html";
             return;
+        } else if(email === temp_data[i].email){
+            window.alert("Wrong Password");
+            return;
         }
     }
-    window.alert("not found");
+    window.alert("Email is not registered");
+    return;
 });

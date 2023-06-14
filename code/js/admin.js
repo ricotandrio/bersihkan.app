@@ -1,10 +1,10 @@
 var userdata = [
-    {"username": "John Doe", "poin": "32674", "status": "active", "account": "admin"},
+    {"username": "Bersihkan", "poin": "32674", "status": "active", "account": "admin"},
     {"username": "Jane Smith", "poin": "500", "status": "inactive", "account": "admin"},
     {"username": "Michael Johnson", "poin": "10000", "status": "inactive", "account": "admin"},
     {"username": "Emily Brown", "poin": "2500", "status": "active", "account": "user"},
     {"username": "David Wilson", "poin": "750", "status": "active", "account": "user"},
-]
+];
 
 const user = document.getElementById("user_info");
 user.innerHTML = `<h1>Welcome, ${userdata[0].username} (${userdata[0].account})</h1>`

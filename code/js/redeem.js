@@ -19,6 +19,8 @@ for (let i = 0; i < productRedeem.length; i++) {
 var userLogged = localStorage.getItem("userLogin");
 var loggedIn = JSON.parse(userLogged);
 
+localStorage.setItem("user_data", JSON.stringify(temp_user_data));
+
 function redeemTransaction(index){
     console.log(loggedIn.point);
     if(productRedeem[index].point > loggedIn.point){
@@ -26,8 +28,16 @@ function redeemTransaction(index){
         return;
     }
 
-    loggedIn.point = loggedIn.point - productRedeem[index].point;
-    console.log(loggedIn);
     alert(`You redeemed ${productRedeem[index].name}`);
+    let userData = JSON.parse(localStorage.getItem("user_data"));
+    loggedIn.point -= productRedeem[index].point;
+    for (let i = 0; i < userData.length; i++) {
+        if(loggedIn.email == userData[i].email){
+            userData[i].point = loggedIn.point;
+            localStorage.setItem("userLogin", JSON.stringify(loggedIn));
+            localStorage.setItem("user_data", JSON.stringify(userData));
+            break;
+        }
+    }
     return;
 }
