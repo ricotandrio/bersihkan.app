@@ -41,12 +41,12 @@
                 <div class="login_text">
                     <h1>REGISTER</h1>
                 </div>
-                <form action="">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="Your email here" required>
-                    <input type="password" placeholder="Your password here" required>
+                <form action="" id="register-form" onsubmit="signUp()">
+                    <input type="text" placeholder="Your name" id="nama" required>
+                    <input type="email" placeholder="Your email here" id="email2" required>
+                    <input type="password" placeholder="Your password here" id="pass2" required>
 
-                    <button>REGISTER</button>
+                    <button type="submit">REGISTER</button>
                     <div class="with_google">
                         <h5>sign up with google</h5>
                         <img src="../asset/google.png" alt="">
@@ -118,5 +118,6 @@
             </div>
         </footer>
     </main>
+    <script src="../js/login3.js"></script>
 </body>
 </html>
