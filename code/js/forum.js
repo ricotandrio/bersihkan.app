@@ -28,7 +28,9 @@ function showComment(){
 showComment();
 
 function getname(){
-    return "name";
+    var userLogged = localStorage.getItem("userLogin");
+    var loggedIn = JSON.parse(userLogged);
+    return loggedIn.name;
 }
 
 function refresh(scrollX, scrollY){
