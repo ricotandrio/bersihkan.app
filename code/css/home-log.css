@@ -16,7 +16,7 @@ main {
     position: relative;
     top: 1vw;
     width: 100%;
-    padding-bottom: 6vw;
+    padding-bottom: 0;
 }
 
 .main_container {
@@ -96,23 +96,24 @@ main {
     /* top: 16vw;
     position: absolute; */
     /* height: 15vw; */
-    margin: 5vw 0;
+    margin: 2vw 0;
     width: 15vw;
     margin-top: 4vw;
-    top: 16vw;
+    top: 12vw;
     position: absolute;
-    height: 15vw;
+    height: 16vw;
     width: 18vw;
-    padding: 2vw;
+    padding: 2vw 4vw 0 2vw;
     border-radius: 2vw;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+    text-align: justify;
 }
 
 .recycle:hover, .redeem:hover, .forum:hover{
     /* background-color: red; */
     height: 20vw;
-    width: 22vw;
+    width: 20vw;
 }
 
 .recycle{
@@ -157,6 +158,7 @@ main {
 
 
 .bottom-half{
+    position: relative;
     display: flex;
     border-top-left-radius: 2vw;
     border-top-right-radius: 2vw;
@@ -185,9 +187,10 @@ main {
     height: 4vw;
     align-items: start;
     flex-direction: column;
-    padding-top: 0.5vw;
+    padding-top: 1vw;
     padding-left: 2vw;
     margin-top: 3vw;
+    padding-bottom: 0.5vw;
 }
 
 .balance p, .balance h2{
