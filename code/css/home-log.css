@@ -76,6 +76,12 @@
     /* height: 15vw; */
     margin: 5vw 0;
     width: 15vw;
+    margin-top: 4vw;
+    top: 16vw;
+    position: absolute;
+    height: 15vw;
+    width: 18vw;
+    padding: 2vw;
     border-radius: 2vw;
     transition: all 0.5s ease-in-out;
     cursor: pointer;

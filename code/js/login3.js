@@ -1,5 +1,5 @@
 var user_data = [
-    { "name": "user001", "email": "user@gmail.com", "password": "123456789", "point": "0" }
+    {"name": "user001", "email": "user@gmail.com", "password": "admin135246", "point": "0"}
 ];
 
 function initializeLocalStorageVariable(variableName, defaultValue) {
@@ -56,8 +56,13 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
     var temp_data = JSON.parse(data_user_storage);
     for(let i = 0; i < temp_data.length; i++){
 
-        console.log(temp_data[i].email + " " + temp_data[i].password)
-        if(email === temp_data[i].email && pass === temp_data[i].password){
+        console.log(temp_data[i].email + " " + temp_data[i].password);
+        if(email === temp_data[i].email && pass === temp_data[i].password && email === "user@gmail.com"){
+            localStorage.setItem("userLogin", JSON.stringify(temp_data[i]));
+            window.alert("login Admin");
+            window.location.href = "admin.html";
+            return;
+        } else if(email === temp_data[i].email && pass === temp_data[i].password){
             localStorage.setItem("userLogin", JSON.stringify(temp_data[i]));
             window.alert("login");
             window.location.href = "home-logged-in.html";
