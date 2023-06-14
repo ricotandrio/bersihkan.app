@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 1.2vw;
+}
+
+main {
+    position: relative;
+    top: 1vw;
+    width: 100%;
+    padding-bottom: 6vw;
+}
+
+.main_container {
+    width: 97%;
+    color: black;
+    padding: 1vw;
+    /* border: 1px solid black; */
+}
+
+.main_card {
+    width: 100% - 2vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 2vw;
+}
+
+.main_card img {
+    width: 20vw;
+    height: 30vw;
+}
+
+.main_card h1, .main_card h2 {
+    padding: 0 0 0 3vw;
+    margin: 0;
+}
+
+.main_card h2 {
+    padding-top: 2vw;
+}
+
+.main_card ul {
+    margin-left: 3vw;
+}
+
+.main_card button {
+    margin-left: 4vw;
+    width: 20vw;
+    height: 3vw;
+    border-radius: 3vw;
+    border-color: transparent;
+    background-color: #c8ef1a;
+    margin-top: 2vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+}
+
+.main_card button:hover, .card button:hover {
+    box-shadow: 0px 0px 3vw rgba(200, 239, 26, 0.75);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_container {
+    padding: 2vw;
+    width: 100% - 2vw;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6vw;
+    margin-bottom: 10vw;
+}
+
+button:focus {
+    outline: none;
+}
+
+.card {
+    width: 20%;
+    padding: 3vw;
+    box-shadow: 0px 0px 20px rgba(11, 11, 11, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 14vw;
+}
+
+.card h1 {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.card h3 {
+    font-size: 0.8rem;
+    opacity: 60%;
+}
+
+.card button {
+    width: 50%;
+    height: 3vw;
+    border-radius: 3vw;
+    border: transparent;
+    background-color: #c8ef1a;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2vw;
+    font-size: 1rem;
+}
