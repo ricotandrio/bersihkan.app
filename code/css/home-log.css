@@ -1,7 +1,16 @@
-.main_container{
-    border: solid;
+main {
     position: relative;
-    background-color: #FAEDCD;
+    top: 1vw;
+    width: 100%;
+    /* transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s; */
+}
+
+.main_container {
+    width: 97%;
+    color: black;
+    padding: 1vw;
+    background-color: #dafbcb;
+    /* border: 1px solid black; */
 }
 
 .user-info{
@@ -50,6 +59,7 @@
 .options{
     display: flex;
     justify-content: space-evenly;
+    border: 3px solid purple;
 }
 
 .options h1, .options p{
@@ -66,12 +76,13 @@
     font-weight: lighter;
 }
 
-
 .recycle, .redeem, .forum{
+    margin-top: 4vw;
     top: 16vw;
     position: absolute;
     height: 15vw;
-    width: 15vw;
+    width: 18vw;
+    padding: 2vw;
     border-radius: 2vw;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
