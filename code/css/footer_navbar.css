@@ -109,7 +109,7 @@ nav ul li:hover {
 footer {
     width: 97%;
     padding: 1vw;
-    border: 1px solid black;
+    border-top: 2px solid black;
 }
 
 .footer_top {

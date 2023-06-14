@@ -23,13 +23,13 @@ main {
     width: 97%;
     color: black;
     padding: 1vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .user_info {
     width: 100% - 1vw;
     padding: 1vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .user_info h1 {
@@ -39,7 +39,7 @@ main {
 .brief_card {
     width: 100% - 1vw;
     padding: 1vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     gap: 2vw;
@@ -104,7 +104,7 @@ main {
 .user_request_container, .user_request {
     width: 100% - 2vw;
     padding: 1vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .request {

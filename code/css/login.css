@@ -23,7 +23,7 @@ main {
     width: 97%;
     color: black;
     padding: 1vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .form_container {

@@ -110,7 +110,8 @@ nav ul li:hover {
 footer {
     width: 97%;
     padding: 1vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-top: 2px solid black;
 }
 
 .footer_top {
@@ -258,7 +259,7 @@ main {
     padding: 0;
     border-color: green;
     width: 100%;
-    height: 60vw;
+    height: 55vw;
     filter: brightness(0.5);
 }
 
@@ -307,23 +308,30 @@ main {
     padding: 2vw;
 }
 
-#about-us:checked ~ .select .about-us-text{
-    color: black;
+.about-us-text, .our-service-text, .partner-text {
+    opacity: 60%;
 }
-#our-service:checked ~ .select .our-service-text{
+
+#about-us:checked ~ .select .about-us-text, #our-service:checked ~ .select .our-service-text, #partner:checked ~ .select .partner-text{
     color: black;
-}
-#partner:checked ~ .select .partner-text{
-    color: black;
+    opacity: 100%;
+    z-index: 3;
 }
 
 .divider{
-    margin: 0 0 0 0vw;
+    margin: 0.3em 0 0 0vw;
     height: 0.2vw;
-    width: 80vw;
+    width: 300%;
     background-color: black;
+    opacity: 50%;
 }
 
+.label_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .info{
     position: relative;

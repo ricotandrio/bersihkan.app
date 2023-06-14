@@ -11,7 +11,7 @@ class Person {
 var userData = [];
 
 // Event listener to handle when the file has been loaded
-reader.onload = function(e) {
+fileRead.onload = function(e) {
   var contents = e.target.result; // Get the file contents
 
   // Split the contents into an array of lines
@@ -35,14 +35,14 @@ reader.onload = function(e) {
     });
 
   // Do something with the array of objects
-  console.log(userData);
+    console.log(userData);
 };
 
 document.getElementById('contact-us').addEventListener('submit', (event) => {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const pass = document.getElementById('pass').value;
-    
+
     var start = 0;
     var last = userData.length;
     var user = null;
@@ -55,8 +55,8 @@ document.getElementById('contact-us').addEventListener('submit', (event) => {
         } else if(userData[mid].name < email) last = mid - 1;
         else start = mid + 1;
     }
-    
+
     if(user != null){
-        window.location.href = "home.html";
+        window.location.href = "../html/home.html";
     }
 });
