@@ -50,7 +50,8 @@ console.log(JSON.parse(data_user_storage).length);
 //     else alert("Wrong password");
 // }
 
-function login(){
+document.getElementById('login-form').addEventListener('submit', (event) => {
+    event.preventDefault();
     let email = document.getElementById("email2").value;
     let pass = document.getElementById("pass2").value;
 
@@ -59,10 +60,11 @@ function login(){
 
         console.log(temp_data[i].email + " " + temp_data[i].password)
         if(email === temp_data[i].email && pass === temp_data[i].password){
-            window.location.href = "../html/home-logged-in.html";
+            localStorage.setItem("userLogin", JSON.stringify(temp_data[i]));
             window.alert("login");
+            window.location.href = "home-logged-in.html";
             return;
         }
     }
     window.alert("not found");
-}
+});
