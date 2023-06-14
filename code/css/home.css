@@ -19,7 +19,7 @@ header {
     align-items: center;
     width: 100%;
     color: black;
-    z-index: 2;
+    z-index: 11;
     background-color: transparent;
     border: transparent;
 }
