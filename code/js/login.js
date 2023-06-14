@@ -26,23 +26,23 @@ mergeSort(0, userData.length, userData);
 document.getElementById('contact-us').addEventListener('submit', (event) =>{
     event.preventDefault();
     const email = document.getElementById('email').value;
-    const name = document.getElementById('pass').value;
-    
+    const pass = document.getElementById('pass').value;
+
     var start = 0;
     var last = userData.length;
     var user = null;
     while(start <= last){
         mid = start + (last - start) / 2;
         if(userData[mid].name == email){
-            if(userData[mid].password == password) user = userData[mid];
+            if(userData[mid].password == pass) user = userData[mid];
             else alert("Incorrect Password");
             break;
         } else if(userData[mid].name < email) last = mid - 1;
         else start = mid + 1;
     }
-    
+    console.log("sjdk")
     if(user != null){
-        window.location.href = "home.html";
+        window.location.href = "../html/home-logged-in.html";
     }
 });
 
@@ -61,7 +61,7 @@ function mergeSort(start, last, array){
 	var indeksKanan = mid + 1;
 	var kiriMaks = mid;
 	var kananMaks = last;
-	
+
 	while(indeksKiri <= kiriMaks && indeksKanan <= kananMaks){
 		if(array[indeksKiri] > array[indeksKanan]){
 			tempArray[tempIndeks] = array[indeksKiri];
@@ -72,19 +72,19 @@ function mergeSort(start, last, array){
 		}
 		tempIndeks++;
 	}
-	
+
 	while(indeksKiri <= kiriMaks){
 		tempArray[tempIndeks] = array[indeksKiri];
 		indeksKiri++;
 		tempIndeks++;
 	}
-	
+
 	while(indeksKanan <= kananMaks){
 		tempArray[tempIndeks] = array[indeksKanan];
 		indeksKanan++;
 		tempIndeks++;
 	}
-	
+
 	tempIndeks = 0;
 	for(let i = awal; i <= akhir; i++){
 		array[i] = tempArray[tempIndeks];

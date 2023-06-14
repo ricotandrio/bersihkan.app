@@ -16,7 +16,7 @@ main {
     position: relative;
     top: 1vw;
     width: 100%;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+    /* transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s; */
 }
 
 .main_container {
