@@ -90,13 +90,14 @@ main {
 
 .sticky_add_forum > form input {
     width: 80%;
-    height: 80%;
+    height: 90%;
     margin-right: 2vw;
     padding: 0 3vw 0 3vw;
     border-radius: 2vw;
     border: 1px solid gray;
     opacity: 70%;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
 .sticky_add_forum > form input:focus {
@@ -108,6 +109,8 @@ main {
     background-color: transparent;
     cursor: pointer;
     transition: ease-in-out 0.5s;
+    border-radius: 1vw;
+    height: 90%;
 }
 
 .sticky_add_forum > form button:hover {
@@ -115,5 +118,24 @@ main {
 }
 
 .sticky_add_forum > form button img {
-    width: 3vw;
+    position: relative;
+    width: 2vw;
+    top: 0.2em;
+    left: -0.1em;
+}
+
+@media all and (max-width: 768px){
+    .comment_bubble {
+        padding: 5vw 5vw 3vw 5vw;
+    }
+}
+
+@media all and (max-width: 480px){
+    .sticky_add_forum {
+        height: 8vw;
+    }
+
+    .comment_bubble {
+        border-radius: 6vw;
+    }
 }
