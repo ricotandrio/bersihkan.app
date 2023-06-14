@@ -1,5 +1,5 @@
 var user_data = [
-    {"name": "user001", "email": "user@gmail.com", "password": "admin135246", "point": "0"}
+    {"name": "user001", "email": "user@gmail.com", "password": "admin135246", "point": 0}
 ];
 
 function initializeLocalStorageVariable(variableName, defaultValue) {
@@ -23,7 +23,7 @@ function signUp() {
             return;
         }
     }
-    temp_user_data.push({ "name": nama, "email": email, "password": pass, "point": "0"});
+    temp_user_data.push({ "name": nama, "email": email, "password": pass, "point": 100000});
     localStorage.setItem("user_data", JSON.stringify(temp_user_data));
     console.log("Data is added" + object);
     window.alert("STOP")
