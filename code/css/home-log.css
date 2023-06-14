@@ -1,7 +1,30 @@
-.main_container{
-    border: solid;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 1.2vw;
+}
+
+main {
     position: relative;
-    background-color: #FAEDCD;
+    top: 1vw;
+    width: 100%;
+    padding-bottom: 6vw;
+}
+
+.main_container {
+    width: 100%;
+    color: black;
+    border: 1px solid black;
+    position: relative;
+    background-color: #dafbcb;
 }
 
 .user-info{
@@ -69,7 +92,6 @@
     font-weight: lighter;
 }
 
-
 .recycle, .redeem, .forum{
     /* top: 16vw;
     position: absolute; */
@@ -88,13 +110,18 @@
 }
 
 .recycle:hover, .redeem:hover, .forum:hover{
-    background-color: red;
+    /* background-color: red; */
     height: 20vw;
+    width: 22vw;
 }
 
 .recycle{
     background-color: #3F0071;
     left: 10vw;
+}
+
+.recycle:hover {
+    background-color: white;
 }
 
 .recycle:hover p, .recycle:hover h1{
@@ -134,7 +161,7 @@
     border-top-left-radius: 2vw;
     border-top-right-radius: 2vw;
     background-color: white;
-    padding-top: 10vw;
+    padding-bottom: 5vw;
 }
 
 .bottom-half h1{
@@ -150,8 +177,8 @@
 .balance{
     display: flex;
     border: solid;
-    border-color: black;
-    border-radius: 0.5vw;
+    border-radius: 2vw;
+    border: transparent;
     border-width: 0.1vw;
     box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.5);
     width: 30vw;
@@ -159,6 +186,8 @@
     align-items: start;
     flex-direction: column;
     padding-top: 0.5vw;
+    padding-left: 2vw;
+    margin-top: 3vw;
 }
 
 .balance p, .balance h2{
@@ -177,16 +206,17 @@
 .permintaan{
     flex: 1;
     width: 25vw;
-    padding-bottom: 4vw;
+    padding-bottom: 3vw;
+    padding-left: 1vw;
 }
 
 .orders{
     border: solid;
-    border-color: black;
-    border-radius: 0.5vw;
+    border-color: transparent;
+    border-radius: 2vw;
     border-width: 0.1vw;
     box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.5);
-
+    margin-top: 3vw;
     width: 40vw;
     display: flex;
     justify-content: space-evenly;
