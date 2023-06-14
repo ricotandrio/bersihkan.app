@@ -22,27 +22,96 @@ main {
 .main_container {
     width: 97%;
     color: black;
-    padding: 1vw;
+    padding: 1vw 1vw 8vw 1vw;
     /* border: 1px solid black; */
 }
 
 .title_bar {
-    padding-left: 2vw;
+    padding-left: 4vw;
+    margin-bottom: 5vw;
 }
 
 .input_container {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .form_container {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
 }
 
 .form_container form {
+    position: relative;
+    flex-direction: column;
+    display: flex;
     width: 50%;
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black;  */
+    padding: 3vw;
+    justify-content: center;
+    align-self: center;
+}
+
+.input_container {
+    padding: 1vw;
+    margin: 1vw;
+    border: transparent;
+    border-radius: 2vw;
+    box-shadow: 0px 0px 0.1em rgba(0, 0, 0, 0.8);
+}
+
+.input_container label, .input_weight label {
+    margin: 1vw;
+}
+
+.input_container input {
+    margin-left: 1vw;
+    height: 1vw;
+    width: 50%;
+    border-radius: 2vw;
+    border: transparent;
+    padding: 1vw 1vw 1vw 2vw;
+    font-size: 0.8rem;
+}
+
+input:focus {
+    outline: none;
+}
+.weight input {
+    width: 20%;
+}
+
+.map_img {
+    width: 50%;
+    margin: auto;
+}
+
+.map_img img {
+    width: 100%;
+}
+
+.checkbox_container {
+    padding-left: 3vw;
+    margin-top: 2vw;
+}
+
+#button_recycle {
+    width: 50%;
+    margin: auto;
+    margin-top: 5vw;
+    height: 3vw;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 2vw;
+    border: transparent;
+    background-color: #c8ef1a;
+    transition: linear 0.5s;
+}
+
+#button_recycle:hover {
+    box-shadow: 0px 0px 3vw rgba(200, 239, 26, 0.75);
 }
