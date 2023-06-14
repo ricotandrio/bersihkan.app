@@ -50,6 +50,9 @@
 .options{
     display: flex;
     justify-content: space-evenly;
+    /* border: 1px solid red; */
+    height: 25vw;
+    background-color: white;
 }
 
 .options h1, .options p{
@@ -68,9 +71,10 @@
 
 
 .recycle, .redeem, .forum{
-    top: 16vw;
-    position: absolute;
-    height: 15vw;
+    /* top: 16vw;
+    position: absolute; */
+    /* height: 15vw; */
+    margin: 5vw 0;
     width: 15vw;
     border-radius: 2vw;
     transition: all 0.5s ease-in-out;
@@ -78,7 +82,7 @@
 }
 
 .recycle:hover, .redeem:hover, .forum:hover{
-    background-color: white;
+    background-color: red;
     height: 20vw;
 }
 
@@ -124,7 +128,7 @@
     border-top-left-radius: 2vw;
     border-top-right-radius: 2vw;
     background-color: white;
-    padding-top: 15vw;
+    padding-top: 10vw;
 }
 
 .bottom-half h1{
