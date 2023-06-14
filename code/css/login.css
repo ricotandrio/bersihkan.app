@@ -98,3 +98,8 @@ main {
     margin-top: 1vw;
     cursor: pointer;
 }
+
+
+#text-Fail{
+    color: red;
+}

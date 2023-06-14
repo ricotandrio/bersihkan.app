@@ -19,8 +19,6 @@ for (let i = 0; i < productRedeem.length; i++) {
 var userLogged = localStorage.getItem("userLogin");
 var loggedIn = JSON.parse(userLogged);
 
-localStorage.setItem("user_data", JSON.stringify(temp_user_data));
-
 function redeemTransaction(index){
     console.log(loggedIn.point);
     if(productRedeem[index].point > loggedIn.point){

@@ -113,5 +113,36 @@ input:focus {
 }
 
 #button_recycle:hover {
-    box-shadow: 0px 0px 3vw rgba(200, 239, 26, 0.75);
+    box-shadow: 0px 0px 3vw #c8ef1abf;
+}
+
+#list-title{
+    margin-bottom: 0;
+    padding-left: 2vw;
+}
+
+#list-title > h1{
+    margin-bottom: 0.8vw;
+}
+
+.recycle-list{
+    padding: 0.8vw;
+    margin-bottom: 2vw;
+    font-size: 1.8vw;
+    border: 0.5vw ridge;
+    border-radius: 2vw;
+
+}
+
+.recycle-list > button{
+    background-color: #c8ef1abf;
+    width: 10%;
+    height: 3vw;
+    border-radius: 2vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+#no-order-list{
+    padding-left: 2vw;
+    font-size: 1.5vw;
 }

@@ -23,14 +23,15 @@
 
     <nav class="side_nav">
         <ul>
-            <li><a href="../html/home.html">HOME</a></li>
-            <li><a href="../html/recycle.html">RECYCLE</a></li>
-            <li><a href="../html/redeem.html">REDEEM</a></li>
-            <li><a href="../html/forum.html">FORUM</a></li>
-            <li><a href="../html/aboutus.html">ABOUT US</a></li>
-            <li id><a href="../html/login.html" id="login">LOGIN</a></li>
-            <li><a href="../html/register.html" id="register">REGISTER</a></li>
-            <li id="logout"><a href="../html/login.html">LOGOUT</a></li>
+            <li><a href="home.html" id="home-default">HOME</a></li>
+            <li><a href="home-logged-in.html" id="home-logged-in">HOME</a></li>
+            <li><a href="recycle.html">RECYCLE</a></li>
+            <li><a href="redeem.html">REDEEM</a></li>
+            <li><a href="forum.html">FORUM</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li id><a href="login.html" id="login">LOGIN</a></li>
+            <li><a href="register.html" id="register">REGISTER</a></li>
+            <li id="logout"><a href="login.html">LOGOUT</a></li>
             <li style="position: absolute; bottom: 20vh;"><a href="../html/admin.html" id="admin">ADMIN</a></li>
         </ul>
     </nav>
@@ -41,7 +42,7 @@
                 <h1>Recycle Form</h1>
             </div>
             <div class="form_container">
-                <form action="">
+                <form id="recycle-form">
                     <div class="input_container">
                         <label for="address"><img src="../asset/map.png" alt="map" width="20vw"></label>
                         <input type="text" id="address" placeholder="Palmerah, Jakarta Barat, DKI Jakarta." required>
@@ -52,7 +53,7 @@
                     </div>
                     <div class="input_container">
                         <label for="notes"><img src="../asset/notes.png" alt="map" width="20vw"></label>
-                        <input type="text" id="notes" placeholder="Notes" required>
+                        <input type="text" id="notes" placeholder="Notes (Optional)" required>
                     </div>
                     <div class="input_container weight">
                         <label for="weight"><img src="../asset/weight.png" alt="map" width="20vw"></label>
@@ -70,6 +71,13 @@
                     <img src="../asset/map_big.png" alt="">
                 </div>
             </div>
+            <div class="title_bar" id="list-title">
+                <h1>Recycle List</h1>
+            </div>
+            <div id="recycle-list-container">
+                <!-- List by Javascript -->
+            </div>
+            <div id="no-order-list">There is no order</div>
         </div>
 
         <footer>
@@ -135,8 +143,7 @@
             </div>
         </footer>
     </main>
-
-    <script src="../js/recycle.js"></script>
     <script src="../js/general.js"></script>
+    <script src="../js/recycle.js"></script>
 </body>
 </html>

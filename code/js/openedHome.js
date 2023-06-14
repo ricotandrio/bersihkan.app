@@ -1,10 +1,10 @@
 var temp = document.getElementById('username');
-
-var userLogged = localStorage.getItem("userLogin");
-
-var loggedIn = JSON.parse(userLogged);
-
+var loggedIn = JSON.parse(localStorage.getItem("userLogin"));
+console.log(loggedIn);
 temp.innerHTML = `<h1>Welcome, ${loggedIn.name}</h1>`
+
+var userPoint = document.getElementById('balance');
+userPoint.innerHTML += `<h2>${loggedIn.point} poin</h2>`;
 
 document.getElementById("recycle").addEventListener("click", function(){
     window.location.href = "../html/recycle.html";

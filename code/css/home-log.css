@@ -175,7 +175,7 @@ main {
     flex: 1;
 }
 
-.balance{
+#balance{
     display: flex;
     border: solid;
     border-radius: 2vw;
@@ -192,16 +192,16 @@ main {
     padding-bottom: 0.5vw;
 }
 
-.balance p, .balance h2{
+#balance p, #balance h2{
     margin: 0 0 0 0.5vw;
     padding: 0;
 }
 
-.balance p{
+#balance p{
     font-size: 0.6rem;
 }
 
-.balance h2{
+#balance h2{
     font-size: 1.3rem;
 }
 
