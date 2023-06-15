@@ -10,10 +10,14 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     const check = document.getElementById('checkbox').checked;
 
     if(!localStorage.getItem('userLogin')){
+        window.alert("Please login first before do recycle!");
         window.location.href="login.html";
         return;
     }
 
+    if(weight <= 0){
+        window.alert("Weight of item cannot be negative integer");
+    }
     var currentDate = new Date();
     var userDate = new Date(date);
     // if(userDate <= currentDate){
@@ -22,7 +26,7 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     // }
 
     if(!check){
-        alert("You must be responsible for the information");
+        window.alert("You must be responsible for the information");
         return;
     }
 
@@ -74,17 +78,38 @@ function cancelOrder(index){
     return;
 }
 
+// function showList(){
+//     if(loggedIn.order.length != 0){
+//         document.getElementById('no-order-list').style.display = "none";
+//         for (let i = 0; i < loggedIn.order.length; i++) {
+//             // if(loggedIn.order[i].)
+//             temp.innerHTML += `<div class="recycle-list">
+//                                     <div class="information">${loggedIn.order[i].date}</div>
+//                                     <div class="information">${loggedIn.order[i].place}</div>
+//                                     <div class="information">${loggedIn.order[i].weight} kg</div>
+//                                     <div class="information">${loggedIn.order[i].notes}</div>
+//                                     <button onclick="cancelOrder(${i})">Cancel</button>
+//                                 </div>`
+//         }
+//     } else{
+//         document.getElementById('no-order-list').style.display = "block";
+//     }
+// }
+
 function showList(){
-    if(loggedIn.order.length != 0){
+    var orderList = JSON.parse(localStorage.getItem("order_data"));
+    if(orderList.length != 0){
         document.getElementById('no-order-list').style.display = "none";
-        for (let i = 0; i < loggedIn.order.length; i++) {
-            temp.innerHTML += `<div class="recycle-list">
-                                    <div class="information">${loggedIn.order[i].date}</div>
-                                    <div class="information">${loggedIn.order[i].place}</div>
-                                    <div class="information">${loggedIn.order[i].weight} kg</div>
-                                    <div class="information">${loggedIn.order[i].notes}</div>
-                                    <button onclick="cancelOrder(${i})">Cancel</button>
-                                </div>`
+        for (let i = 0; i < orderList.length; i++) {
+            if(orderList[i].progress != "done"){
+                temp.innerHTML += `<div class="recycle-list">
+                                        <div class="information"><h1>${orderList[i].date}</h1></div>
+                                        <div class="information"><h3>${orderList[i].place}</h3></div>
+                                        <div class="information"><h2>${orderList[i].weight} kg</h2></div>
+                                        <div class="information"><h4>${orderList[i].notes}</h4></div>
+                                        <button onclick="cancelOrder(${i})">Cancel</button>
+                                    </div>`
+            }
         }
     } else{
         document.getElementById('no-order-list').style.display = "block";
@@ -92,3 +117,5 @@ function showList(){
 }
 
 showList();
+
+

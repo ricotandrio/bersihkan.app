@@ -39,3 +39,7 @@ function redeemTransaction(index){
     }
     return;
 }
+
+function exclusive(){
+    window.alert("Contact admin to redeem exclusive product")
+}

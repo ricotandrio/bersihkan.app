@@ -36,7 +36,7 @@ main {
     display: flex;
     flex-direction: row;
     padding: 2vw;
-    margin-left: 3vw;
+    margin-left: 9vw;
 }
 
 .main_card img {
@@ -85,11 +85,10 @@ main {
     width: 100% - 2vw;
     display: flex;
     flex-direction: row;
-    gap: 5vw;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 6vw;
-    margin-bottom: 10vw;
+    margin-bottom: 15vw;
     flex-wrap: wrap;
 }
 
@@ -99,13 +98,17 @@ button:focus {
 
 .card {
     width: 20%;
-    padding: 3vw;
-    box-shadow: 0px 0px 20px rgba(11, 11, 11, 0.2);
+    /* padding: 3vw; */
+    /* box-shadow: 0px 0px 20px rgba(11, 11, 11, 0.2); */
 }
 
 .card img {
     width: 100%;
     height: 14vw;
+}
+
+.card h1, .card h2, .card h3 {
+    padding: 0vw 1vw 0vw 1vw;
 }
 
 .card h1 {
@@ -125,7 +128,7 @@ button:focus {
 }
 
 .card button {
-    width: 50%;
+    width: 90%;
     height: 3vw;
     border-radius: 3vw;
     border: transparent;
@@ -133,4 +136,11 @@ button:focus {
     font-family: 'Poppins', sans-serif;
     margin-top: 2vw;
     font-size: 1rem;
+    margin: 2vw 1vw 0 1vw;
+}
+
+@media all and (max-width: 768px){
+    .card button, .main_card button {
+        font-size: 0.8rem;
+    }
 }

@@ -81,6 +81,7 @@ main {
 
 input:focus {
     outline: none;
+    background-color: none;
 }
 .weight input {
     width: 20%;
@@ -98,6 +99,12 @@ input:focus {
 .checkbox_container {
     padding-left: 3vw;
     margin-top: 2vw;
+}
+
+#list-title {
+    margin-top: 10vw;
+    border-top: 0.3vw solid black;
+    padding-top: 5vw;
 }
 
 #button_recycle {
@@ -126,12 +133,11 @@ input:focus {
 }
 
 .recycle-list{
-    padding: 0.8vw;
+    padding: 3vw;
     margin-bottom: 2vw;
     font-size: 1.8vw;
     border: 0.5vw ridge;
     border-radius: 2vw;
-
 }
 
 .recycle-list > button{
@@ -140,9 +146,49 @@ input:focus {
     height: 3vw;
     border-radius: 2vw;
     font-family: 'Poppins', sans-serif;
+    margin-top: 2vw;
+    border: transparent;
+}
+
+.recycle-list > button:hover {
+    box-shadow: 0px 0px 3vw rgba(200, 239, 26, 0.75);
+    cursor: pointer;
 }
 
 #no-order-list{
     padding-left: 2vw;
     font-size: 1.5vw;
+}
+
+#recycle-list-container {
+    width: 100%;
+    border: 2px solid purple;
+    margin-top: 6vw;
+}
+
+.information h1, .information h2, .information h3, .information h4{
+    padding: 0;
+    margin: 0;
+}
+
+.information h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.information h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.information h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0;
+}
+
+.information h4 {
+    font: 1rem;
+    font-weight: 300;
+    padding-top: 1.5vw;
 }

@@ -46,6 +46,9 @@ const formButton = document.getElementById("submit_button");
 
 formButton.addEventListener("click", function(event){
     event.preventDefault();
+    if(!localStorage.getItem("userLogin")){
+        window.alert("Please login first");
+    }
     var name = getname();
     var msg = document.getElementById("message_text");
     var currentDate = new Date();

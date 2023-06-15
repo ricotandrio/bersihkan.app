@@ -6,6 +6,14 @@ var admindata = [
     {"username": "David Wilson", "poin": "750", "status": "active", "account": "user"},
 ];
 
+function initializeLocalStorageVariable(variableName, defaultValue) {
+    if (!localStorage.getItem(variableName)) {
+      localStorage.setItem(variableName, JSON.stringify(defaultValue));
+    }
+}
+
+// initializeLocalStorageVariable('order_data', {"progress": "","email": "", "date": ""});
+
 const user = document.getElementById("user_info");
 user.innerHTML = `<h1>Welcome, ${admindata[0].username} (${admindata[0].account})</h1>`
 
@@ -76,8 +84,8 @@ function checkType(index){
                     if(userData[i].order[j].date == requestOrder[index].date && userData[i].order[j].place == requestOrder[index].place && userData[i].order[j].weight == requestOrder[index].weight && userData[i].order[j].notes == requestOrder[index].notes){
                         userData[i].point += userData[i].order[j].pointPlus;
                         userData[i].order.splice(j, 1);
-                        localStorage.setItem('user_data', userData);
-                        localStorage.setItem('order_data', requestOrder);
+                        localStorage.setItem('user_data', JSON.stringify(userData));
+                        localStorage.setItem('order_data', JSON.stringify(requestOrder));
                         console.log("Name: " + userData[i].name);
                         console.log("Point: " + userData[i].point);
                         console.log("email: " + userData[i].email);
