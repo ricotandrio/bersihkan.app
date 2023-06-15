@@ -162,7 +162,7 @@ input:focus {
 
 #recycle-list-container {
     width: 100%;
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     margin-top: 6vw;
 }
 

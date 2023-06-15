@@ -63,6 +63,15 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
 console.log("Total User Order: " + loggedIn.order.length);
 
 function cancelOrder(index){
+    var orderList = JSON.parse(localStorage.getItem("order_data"));
+    for (let i = 0; i < orderList.length; i++) {
+        if(orderList[i].date == loggedIn.order[index].date && orderList[i].place == loggedIn.order[index].place && orderList[i].weight === loggedIn.order[index].weight){
+            orderList.splice(i, 1);
+            localStorage.setItem('order_data', JSON.stringify(orderList));
+            break;
+        }
+    }
+
     loggedIn.order.splice(index, 1);
     let userData = JSON.parse(localStorage.getItem('user_data'));
     for (let i = 0; i < userData.length; i++) {
@@ -78,43 +87,42 @@ function cancelOrder(index){
     return;
 }
 
-// function showList(){
-//     if(loggedIn.order.length != 0){
-//         document.getElementById('no-order-list').style.display = "none";
-//         for (let i = 0; i < loggedIn.order.length; i++) {
-//             // if(loggedIn.order[i].)
-//             temp.innerHTML += `<div class="recycle-list">
-//                                     <div class="information">${loggedIn.order[i].date}</div>
-//                                     <div class="information">${loggedIn.order[i].place}</div>
-//                                     <div class="information">${loggedIn.order[i].weight} kg</div>
-//                                     <div class="information">${loggedIn.order[i].notes}</div>
-//                                     <button onclick="cancelOrder(${i})">Cancel</button>
-//                                 </div>`
-//         }
-//     } else{
-//         document.getElementById('no-order-list').style.display = "block";
-//     }
-// }
-
 function showList(){
-    var orderList = JSON.parse(localStorage.getItem("order_data"));
-    if(orderList.length != 0){
+    if(loggedIn.order.length != 0){
         document.getElementById('no-order-list').style.display = "none";
-        for (let i = 0; i < orderList.length; i++) {
-            if(orderList[i].progress != "done"){
-                temp.innerHTML += `<div class="recycle-list">
-                                        <div class="information"><h1>${orderList[i].date}</h1></div>
-                                        <div class="information"><h3>${orderList[i].place}</h3></div>
-                                        <div class="information"><h2>${orderList[i].weight} kg</h2></div>
-                                        <div class="information"><h4>${orderList[i].notes}</h4></div>
-                                        <button onclick="cancelOrder(${i})">Cancel</button>
-                                    </div>`
-            }
+        for (let i = 0; i < loggedIn.order.length; i++) {
+            temp.innerHTML += `<div class="recycle-list">
+                                    <div class="information">${loggedIn.order[i].date}</div>
+                                    <div class="information">${loggedIn.order[i].place}</div>
+                                    <div class="information">${loggedIn.order[i].weight} kg</div>
+                                    <div class="information">${loggedIn.order[i].notes}</div>
+                                    <button onclick="cancelOrder(${i})">Cancel</button>
+                                </div>`
         }
     } else{
         document.getElementById('no-order-list').style.display = "block";
     }
 }
+
+// function showList(){
+//     var orderList = JSON.parse(localStorage.getItem("order_data"));
+//     if(orderList.length != 0){
+//         document.getElementById('no-order-list').style.display = "none";
+//         for (let i = 0; i < orderList.length; i++) {
+//             if(orderList[i].progress != "done"){
+//                 temp.innerHTML += `<div class="recycle-list">
+//                                         <div class="information"><h1>${orderList[i].date}</h1></div>
+//                                         <div class="information"><h3>${orderList[i].place}</h3></div>
+//                                         <div class="information"><h2>${orderList[i].weight} kg</h2></div>
+//                                         <div class="information"><h4>${orderList[i].notes}</h4></div>
+//                                         <button onclick="cancelOrder(${i})">Cancel</button>
+//                                     </div>`
+//             }
+//         }
+//     } else{
+//         document.getElementById('no-order-list').style.display = "block";
+//     }
+// }
 
 showList();
 

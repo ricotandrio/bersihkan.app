@@ -9,7 +9,7 @@ document.getElementById('register-form').addEventListener('submit', (event) => {
         "name": nama,
         "email": email,
         "password": pass,
-        "point": 100000,
+        "point": 1000,
         "order": []
     };
 
@@ -20,7 +20,7 @@ document.getElementById('register-form').addEventListener('submit', (event) => {
             return;
         }
     }
-    temp_user_data.push({ "name": nama, "email": email, "password": pass, "point": 100000, "order": []});
+    temp_user_data.push({ "name": nama, "email": email, "password": pass, "point": 1000, "order": []});
     localStorage.setItem('user_data', JSON.stringify(temp_user_data));
     localStorage.setItem('userLogin', JSON.stringify(user));
     alert("Register Success");

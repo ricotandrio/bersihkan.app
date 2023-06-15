@@ -10,7 +10,7 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
         console.log(temp_data[i].email + " " + temp_data[i].password);
         if(email === temp_data[i].email && pass === temp_data[i].password && email === "user@gmail.com"){
             localStorage.setItem('userLogin', JSON.stringify(temp_data[i]));
-            window.location.href = "admin.html";
+            window.location.href = "admin_temp.html";
             return;
         } else if(email === temp_data[i].email && pass === temp_data[i].password){
             localStorage.setItem('userLogin', JSON.stringify(temp_data[i]));
