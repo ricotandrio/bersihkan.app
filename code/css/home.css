@@ -341,7 +341,7 @@ main {
     flex-direction: column;
     /* height: 40vw; */
     align-items: center;
-    padding-bottom: 20vw;
+    padding-bottom: 10vw;
     padding-top: 5vw;
 }
 
@@ -399,6 +399,64 @@ main {
 
 input[type="radio"]:checked~ {
     color: black;
+}
+
+.new_section {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vw;
+    margin-top: 3vw;
+    padding: 5vw 0 3vw 0;
+}
+
+.new_section > div {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.new_section > div h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.new_section > div h4 {
+    font-weight: 500;
+}
+
+.new_section button {
+    width: 50%;
+    height: 5vw;
+    margin: 3vw 0 2vw 0;
+    border: transparent;
+    background-color: #c8ef1a;
+    border-radius: 3vw;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.new_section button:hover {
+    box-shadow: 0px 0px 3vw rgba(200, 239, 26, 0.75);
+}
+
+.line_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line_section > div {
+    height: 0.2vw;
+    background-color: black;
+    width: 80%;
+    margin-top: 2vw;
 }
 
 @media all and (max-width: 768px){
