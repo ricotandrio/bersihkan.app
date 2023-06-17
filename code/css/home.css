@@ -312,7 +312,6 @@ main {
 }
 
 .about-us-text, .our-service-text, .partner-text {
-    opacity: 60%;
     transition: linear 0.5s;
 }
 
@@ -382,8 +381,11 @@ main {
     text-align: right;
 }
 
-.info label{
-    color: grey;
+.select label {
+    width: 35%;
+    border-bottom: 0.1em solid black;
+    opacity: 30%;
+    transition: linear 0.5s;
 }
 
 #about-us:checked ~ .main-info .AU{
@@ -409,7 +411,7 @@ input[type="radio"]:checked~ {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10vw;
+    margin-bottom: 6vw;
     margin-top: 3vw;
     padding: 5vw 0 3vw 0;
 }
@@ -459,6 +461,21 @@ input[type="radio"]:checked~ {
     background-color: black;
     width: 80%;
     margin-top: 2vw;
+}
+
+.disclaimer {
+    padding: 2vw 4vw 4vw 4vw;
+    border-radius: 3vw;
+    text-align: justify;
+    margin-bottom: 5vw;
+    background-color: #dafbcb;
+}
+
+.disclaimer h1 {
+    padding-bottom: 0.3em;
+    width: 20%;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 0.9em;
 }
 
 @media all and (max-width: 768px){

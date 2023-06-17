@@ -100,6 +100,8 @@ button:focus {
     width: 20%;
     /* padding: 3vw; */
     /* box-shadow: 0px 0px 20px rgba(11, 11, 11, 0.2); */
+    transition: ease-in-out 0.5s;
+    padding: 1vw;
 }
 
 .card img {
@@ -139,6 +141,9 @@ button:focus {
     margin: 2vw 1vw 0 1vw;
 }
 
+.card:hover {
+    background-color: #eaf2e8;
+}
 @media all and (max-width: 768px){
     .card button, .main_card button {
         font-size: 0.8rem;
