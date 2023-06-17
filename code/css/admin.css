@@ -68,6 +68,10 @@ main {
     background-color: #c8ef1a;
 }
 
+.declined_card {
+    background-color: #F44336;
+}
+
 .card button {
     width: 10vw;
     height: 2em;
