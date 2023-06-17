@@ -45,6 +45,7 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
 .icon_bars > div {
@@ -90,6 +91,7 @@ nav ul li:hover {
 #burger_icon {
     position: absolute;
     opacity: 0;
+    cursor: pointer;
 }
 
 #burger_icon:checked ~ .side_nav{
