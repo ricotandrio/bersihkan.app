@@ -126,4 +126,16 @@ function showList(){
 
 showList();
 
+var date = new Date();
+var curDate = date.getDate();
+var curMonth = date.getMonth() + 1;
+
+if(curDate < 10) curDate = '0' + curDate;
+if(curMonth < 10) curMonth = '0' + curMonth;
+
+var curYear = date.getUTCFullYear();
+var currentDate = document.getElementById("date");
+
+currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
+
 
