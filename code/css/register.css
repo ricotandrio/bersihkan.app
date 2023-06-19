@@ -75,6 +75,7 @@ main {
     height: 3vw;
     border: transparent;
     transition: ease-in-out 0.5s;
+    background-color: #c8ef1a;
 }
 
 .form_container form button:hover {
@@ -96,4 +97,9 @@ main {
     width: 3vw;
     margin-top: 1vw;
     cursor: pointer;
+}
+
+#text-Fail{
+    text-align: center;
+    color: red;
 }
