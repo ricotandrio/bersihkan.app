@@ -10,7 +10,7 @@ for (let i = 0; i < productRedeem.length; i++) {
     temp.innerHTML += `<div class="card">
                             <img src="${productRedeem[i].photo}" alt="">
                             <h1>${productRedeem[i].name}</h1>
-                            <h2>${productRedeem[i].point}Point</h2>
+                            <h2>${productRedeem[i].point} Point</h2>
                             <h3>Rating: ${productRedeem[i].rating}</h3>
                             <button class="redeem-btn" onclick="redeemTransaction(${i})">REDEEM</button>
                         </div>`
