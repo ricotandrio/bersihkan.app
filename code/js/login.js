@@ -31,3 +31,4 @@ for (var i = 0; i < localStorage.length; i++) {
     console.log(key + ": " + value);
 }
 console.log(JSON.parse(data_user_storage).length);
+

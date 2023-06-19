@@ -34,7 +34,7 @@ if(localStorage.getItem("userLogin")){
     }
     else{
         document.getElementById('admin').style.display = "none";
-        
+
     }
 }
 
@@ -42,3 +42,6 @@ document.getElementById('logout').addEventListener('click', function(){
     localStorage.removeItem('userLogin');
     window.location.href = "login.html";
 });
+
+let userLogin = JSON.parse(localStorage.getItem("userLogin"));
+document.getElementById("coin_value").innerHTML = userLogin.point;
