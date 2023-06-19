@@ -71,7 +71,6 @@ main {
 
 .form_container form button {
     width: 60%;
-    margin-top: 3vw;
     height: 3vw;
     border: transparent;
     transition: ease-in-out 0.5s;
@@ -99,7 +98,11 @@ main {
     cursor: pointer;
 }
 
-
 #text-Fail{
     color: red;
+}
+
+.no_acc {
+    width: 80%;
+    text-align: center;
 }
