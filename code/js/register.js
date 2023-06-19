@@ -20,6 +20,7 @@ document.getElementById('register-form').addEventListener('submit', (event) => {
             return;
         }
     }
+
     temp_user_data.push({ "name": nama, "email": email, "password": pass, "point": 1000, "order": []});
     localStorage.setItem('user_data', JSON.stringify(temp_user_data));
     localStorage.setItem('userLogin', JSON.stringify(user));
@@ -34,3 +35,9 @@ for (var i = 0; i < localStorage.length; i++) {
     console.log(key + ": " + value);
 }
 console.log(JSON.parse(data_user_storage).length);
+
+document.getElementById('pass2').addEventListener('keyup', (event) =>{
+    let pass = document.getElementById('pass2').value;
+    if(pass.length < 8 && pass.length > 0) document.getElementById("text-Fail").innerHTML = "Password must be more or equal to 8 characters long";
+    else document.getElementById("text-Fail").innerHTML = "";
+})
