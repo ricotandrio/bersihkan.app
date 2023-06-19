@@ -24,8 +24,11 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
         return;
     }
 
+    let date = new Date();
     var progress;
-    if(userDate < currentDate) progress = "confirmation";
+    console.log(userDate);
+    console.log(date);
+    if(userDate < date) progress = "confirmation";
     else progress = "process";
 
     let pointPlus = Math.floor(weight * 1000);
@@ -100,7 +103,7 @@ function showList(){
 
 showList();
 
-var date = new Date();
+let date = new Date();
 var curDate = date.getDate();
 var curMonth = date.getMonth() + 1;
 

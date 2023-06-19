@@ -12,18 +12,53 @@ function showRequests(){
     var processType = 0; var doneType = 0; var needConfirmType = 0;
     console.log(requestOrder[0])
     for(let i = 0; i < requestOrder.length; i++){
-        temp += `<div class="request ${requestOrder[i].progress}" onclick="checkType(${i})">
-                    <div class="left">
-                        <img src="../asset/${requestOrder[i].progress}.png" alt="">
-                        <div class="data_user">
-                            <h1>${requestOrder[i].email}</h1>
-                            <h2>${requestOrder[i].date}</h2>
+        if(requestOrder[i].progress == "confirmation"){
+            temp += `<div class="request ${requestOrder[i].progress}" onclick="checkType(${i})">
+                        <div class="left">
+                            <img src="../asset/${requestOrder[i].progress}.png" alt="">
+                            <div class="data_user">
+                                <h1>${requestOrder[i].email}</h1>
+                                <h2>${requestOrder[i].date}</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="right">
-                        <h1 id="requestType">${requestOrder[i].progress}</h1>
-                    </div>
-                </div>`;
+                        <div class="right">
+                            <h3> Status </h3>
+                            <h1 id="requestType">${requestOrder[i].progress}</h1>
+                            <div class="button_type_container">
+                                <button id="accept_btn">Accept</button>
+                                <button id="decline_btn">Decline</button>
+                            </div>
+                        </div>
+                    </div>`;
+        } else if(requestOrder[i].progress == "process"){
+            temp += `<div class="request ${requestOrder[i].progress}" onclick="checkType(${i})">
+                        <div class="left">
+                            <img src="../asset/${requestOrder[i].progress}.png" alt="">
+                            <div class="data_user">
+                                <h1>${requestOrder[i].email}</h1>
+                                <h2>${requestOrder[i].date}</h2>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h3> Status </h3>
+                            <h1 id="requestType">${requestOrder[i].progress}</h1>
+                            <button id="decline_btn">Decline</button>
+                        </div>
+                    </div>`;
+        } else {
+            temp += `<div class="request ${requestOrder[i].progress}" onclick="checkType(${i})">
+                        <div class="left">
+                            <img src="../asset/${requestOrder[i].progress}.png" alt="">
+                            <div class="data_user">
+                                <h1>${requestOrder[i].email}</h1>
+                                <h2>${requestOrder[i].date}</h2>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h1 id="requestType">${requestOrder[i].progress}</h1>
+                        </div>
+                    </div>`;
+        }
         if(requestOrder[i].progress == "process") processType += 1;
         else if(requestOrder[i].progress == "confirmation") needConfirmType += 1;
         else if(requestOrder[i].progress == "done") doneType += 1;
