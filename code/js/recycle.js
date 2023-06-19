@@ -4,7 +4,7 @@ var temp = document.getElementById('recycle-list-container');
 document.getElementById('recycle-form').addEventListener('submit', (event) => {
     event.preventDefault();
     const place = document.getElementById('address').value;
-    const date = document.getElementById('date').value;
+    const userDate = document.getElementById('date').value;
     const weight = document.getElementById('weight').value;
     const notes = document.getElementById('notes').value;
     const check = document.getElementById('checkbox').checked;
