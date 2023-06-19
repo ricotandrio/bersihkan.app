@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bersihkan/templatepage</title>
+    <link rel="stylesheet" href="../css/recycle-list.css">
+    <link rel="stylesheet" href="../css/footer_navbar.css">
+    <link rel="icon" href="../asset/broom.png">
+</head>
+<body>
+    <input type="checkbox" id="burger_icon">
+    <header>
+        <label for="burger_icon">
+            <div class="icon_bars">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </label>
+        <h1>bersihkan</h1>
+        <div class="right-section">
+            <div id="coin-container">
+                <img src="../asset/coin.png" alt="Coin">
+                <div id="coin_value"></div>
+            </div>
+            <div class="user-profile-container">
+                <img src="../asset/user.png" alt="Profile">
+            </div>
+        </div>
+    </header>
+
+    <nav class="side_nav">
+        <ul>
+            <li id="admin"><a href="./admin.html">ADMIN</a></li>
+            <li id="home-default"><a href="../../index.html">HOME</a></li>
+            <li id="home-logged-in"><a href="./home-logged-in.html">HOME</a></li>
+            <li id="recycle"><a href="./recycle.html">RECYCLE</a></li>
+            <li id="redeem"><a href="./redeem.html">REDEEM</a></li>
+            <li id="forum"><a href="./forum.html">FORUM</a></li>
+            <li id="about"><a href="./aboutus.html">ABOUT US</a></li>
+            <li id="login"><a href="./login.html">LOGIN</a></li>
+            <li id="logout"><a href="./login.html">LOGOUT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="brief_card">
+            <div class="card confirm_card">
+                <div class="title">
+                    <img src="../asset/confirmation.png" alt="Need Confirmation">
+                    <h1 id="confirm_num">0</h1>
+                </div>
+                <h2>Need Confirmation</h2>
+                <button id="confirmation_btn">Check</button>
+            </div>
+            <div class="card process_card">
+                <div class="title">
+                    <img src="../asset/process.png" alt="Processed">
+                    <h1 id="process_num">0</h1>
+                </div>
+                <h2>Process</h2>
+                <button id="process_btn">Check</button>
+            </div>
+            <div class="card done_card">
+                <div class="title">
+                    <img src="../asset/done.png" alt="Done">
+                    <h1 id="done_num">0</h1>
+                </div>
+                <h2>Done</h2>
+                <button id="done_btn">Check</button>
+            </div>
+            <div class="card declined_card">
+                <div class="title">
+                    <img src="../asset/declined.png" alt="Declined">
+                    <h1 id="declined_num">0</h1>
+                </div>
+                <h2>Declined</h2>
+                <button id="decline_btn">Check</button>
+            </div>
+        </div>
+        <div class="title_bar" id="list-title">
+            <h1>Recycle List</h1>
+        </div>
+        <div id="recycle-list-container">
+            <!-- List by Javascript -->
+            <div class="list-box">
+                <div class="left-div">
+                    <div class="list-content">
+                        <div>
+                            <img src="../asset/map.png" alt="">
+                            <div>
+                                <h4>Location</h4>
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <p>Lokasi</p>
+                    </div>
+                    <div class="list-content">
+                        <div>
+                            <img src="../asset/calender.png" alt="">
+                            <div>
+                                <h4>Date</h4>
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <p>Tanggal</p>
+                    </div>
+                    <div class="list-content">
+                        <div>
+                            <img src="../asset/weight.png" alt="">
+                            <div>
+                                <h4>Weight</h4>
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <p>Berat</p>
+                    </div>
+                    <div class="list-content">
+                        <div>
+                            <img src="../asset/notes.png" alt="">
+                            <div>
+                                <h4>Notes</h4>
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat rem tempore soluta facere. Vitae vero placeat velit praesentium iusto accusamus nulla molestias, soluta nam sed magnam dolores officiis, sit hic corporis laudantium consectetur? Error incidunt suscipit quam itaque rem iure magni voluptatibus enim molestiae mollitia sequi velit repellat placeat inventore cumque maxime, tempore ex voluptates at delectus pariatur tempora harum. Numquam exercitationem ullam minima? Dolores dicta possimus reiciendis porro deleniti omnis praesentium odit rerum sapiente sequi ipsa obcaecati mollitia expedita aspernatur, distinctio ea voluptatem illo corrupti adipisci libero itaque pariatur eum doloribus ullam. Officia doloremque consequuntur reiciendis labore voluptatibus nam!</p>
+                    </div>
+                </div>
+                <div class="right-div">
+                        <h3>Status:</h3>
+                        <h1 id="requestType">On Process</h1>
+                        <button id="decline_btn" onclick="declineOrder(${i})">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div id="no-order-list" style="padding-top: 2vw;">There is no order</div>
+        
+        
+        <footer>
+            <div class="footer_top">
+                <div class="footer_top_left">
+                    <h1>Sign up to our newsletter</h1>
+                    <h2>Stay up to date with the latest news and announcement</h2>
+                </div>
+                <div class="footer_top_right">
+                    <form action="">
+                        <input type="email" id="email" placeholder="Enter your email here">
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer_mid">
+                <div class="link_container">
+                    <div class="link main_link">
+                        <h1>Bersihkan</h1>
+                        <ul>
+                            <li><a href="./errorpage.html">Partners</a></li>
+                            <li><a href="./errorpage.html">News</a></li>
+                            <li><a href="./errorpage.html">Terms of Service</a></li>
+                            <li><a href="./errorpage.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="link">
+                        <h1>Help & FAQs</h1>
+                        <ul>
+                            <li><a href="./errorpage.html">Error</a></li>
+                            <li><a href="./errorpage.html">Accessbility</a></li>
+                            <li><a href="./errorpage.html">Customer</a></li>
+                            <li><a href="./errorpage.html">Service</a></li>
+                            <li><a href="./errorpage.html">Billing & Coin</a></li>
+                        </ul>
+                    </div>
+                    <div class="link">
+                        <h1>Service</h1>
+                        <ul>
+                            <li><a href="./errorpage.html">Recycle</a></li>
+                            <li><a href="./errorpage.html">Redeem</a></li>
+                            <li><a href="./errorpage.html">Forum</a></li>
+                            <li><a href="./errorpage.html">Daily Pickup</a></li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <h1>Our Social</h1>
+                        <div class="social_icon">
+                            <img src="../asset/linkedin.png" alt="LinkedIn" style="border: 1px solid blue;">
+                            <img src="../asset/telegram.png" alt="Telegram" style="border: 1px solid lightblue;">
+                            <img src="../asset/blog.png" alt="Blog" style="border: 1px solid orangered;">
+                            <img src="../asset/instagram.png" alt="Instagram" style="border: 1px solid purple;">
+                            <img src="../asset/youtube.png" alt="Youtube" style="border: 1px solid red;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <h1>Copyright © 2023 Bersihkan.id. All rights reserved.</h1>
+                <h2>Bersihkan.id (1234 4354) | Indonesia (302123)</h2>
+            </div>
+        </footer>
+    </main>
+    <script src="../js/general.js"></script>
+    <script src="../js/recycle.js"></script>
+</body>
+</html>

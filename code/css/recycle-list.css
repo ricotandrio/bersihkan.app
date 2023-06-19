@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 1.2vw;
+}
+
+.brief_card {
+    width: 100% - 1vw;
+    padding: 4vw;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    justify-content: center;
+}
+
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1vw 1vw 1vw 2vw;
+    background-color: #D9D9D9;
+    border-radius: 1vw;
+}
+
+.confirm_card {
+    background-color: #FFC857;
+}
+
+.process_card {
+    background-color: #00BFFF;
+}
+
+.done_card {
+    background-color: #c8ef1a;
+}
+
+.declined_card {
+    background-color: #F44336;
+}
+
+.card button {
+    width: 10vw;
+    height: 2em;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 1em;
+    border: transparent;
+    transition: ease-in-out 0.2s;
+    background-color: #f2f2f2;
+}
+
+.card button:hover {
+    border: 0.1em solid #005100;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.title h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.title img {
+    width: 3vw;
+    padding: 0;
+    margin: 0;
+}
+
+.user_request_container, .user_request {
+    width: 100% - 2vw;
+    padding: 1vw;
+    /* border: 1px solid black; */
+}
+
+.title_bar {
+    padding-left: 4vw;
+    margin-bottom: 5vw;
+}
+
+#list-title{
+    margin-bottom: 0;
+    padding-left: 2vw;
+}
+
+#list-title > h1{
+    margin-bottom: 0.8vw;
+}
+
+.recycle-list{
+    padding: 3vw;
+    margin-bottom: 2vw;
+    font-size: 1.8vw;
+    border: 0.5vw ridge;
+    border-radius: 2vw;
+}
+
+.recycle-list > button{
+    background-color: #c8ef1abf;
+    width: 10%;
+    height: 3vw;
+    border-radius: 2vw;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2vw;
+    border: transparent;
+}
+
+.recycle-list > button:hover {
+    box-shadow: 0px 0px 3vw rgba(200, 239, 26, 0.75);
+    cursor: pointer;
+}
+
+#no-order-list{
+    padding-bottom: 3vw;
+    padding-left: 2vw;
+    font-size: 1.5vw;
+}
+
+#recycle-list-container {
+    width: 100%;
+    margin-top: 6vw;
+}
+.list-box{
+    display: flex;
+    flex-direction: row;
+    padding: 2vw 4vw;
+    margin: 2vw 4vw;
+    border-radius: 2vw;
+    align-items: center;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.5);
+}
+.list-box .left-div{
+    display: flex;
+    flex-direction: column;
+}
+.list-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+}
+.list-content div{
+    width: 9vw;
+    display: flex;
+    column-gap: 0.5vw;
+    align-items: center;
+}
+.list-content div div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.list-content p{
+    font-size: 1rem;
+    font-weight: 500;
+    max-width: 50vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-content .right-div h1{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.right-div{
+    margin-left: 9vw;
+    display: flex;
+    flex-direction: column;
+}
+.right-div h1{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.right-div h3{
+    margin: 0;
+}
+.right-div button{
+    color: white;
+    font-weight: 700;
+    border-style: none;
+    margin-top: 5vw;
+    height: 1.8vw;
+    width: 10vw;
+    border-radius: 2vw;
+    background-color: #F44336;
+}
