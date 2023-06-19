@@ -32,7 +32,7 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     if(compareDate < date) progress = "confirmation";
     else progress = "process";
 
-    loggedIn.order.push({"pointPlus": weight, "place": place, "date": userDate, "weight": weight, "notes": notes});
+    loggedIn.order.push({"pointPlus": weight, "place": place, "date": userDate, "weight": weight, "notes": notes, "progress": progress});
     if(!localStorage.getItem('order_data')){
         var orderData = [];
         orderData.push({"place": place, "date": userDate, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});

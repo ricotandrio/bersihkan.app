@@ -111,12 +111,6 @@ input:focus {
     margin-top: 2vw;
 }
 
-#list-title {
-    margin-top: 10vw;
-    border-top: 0.3vw solid black;
-    padding-top: 5vw;
-}
-
 #button_recycle {
     width: 50%;
     margin: auto;
@@ -163,17 +157,6 @@ input:focus {
 .recycle-list > button:hover {
     box-shadow: 0px 0px 3vw rgba(200, 239, 26, 0.75);
     cursor: pointer;
-}
-
-#no-order-list{
-    padding-left: 2vw;
-    font-size: 1.5vw;
-}
-
-#recycle-list-container {
-    width: 100%;
-    /* border: 2px solid purple; */
-    margin-top: 6vw;
 }
 
 .information h1, .information h2, .information h3, .information h4{

@@ -36,7 +36,7 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 console.log(JSON.parse(data_user_storage).length);
 
-document.getElementById('pass2').addEventListener('keyup', (event) =>{
+document.getElementById('pass2').addEventListener('keyup', () =>{
     let pass = document.getElementById('pass2').value;
     if(pass.length < 8 && pass.length > 0) document.getElementById("text-Fail").innerHTML = "Password must be more or equal to 8 characters long";
     else document.getElementById("text-Fail").innerHTML = "";

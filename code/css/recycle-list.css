@@ -12,6 +12,13 @@ body {
     font-size: 1.2vw;
 }
 
+.main_container {
+    width: 97%;
+    color: black;
+    padding: 1vw;
+    /* border: 1px solid black; */
+}
+
 .brief_card {
     width: 100% - 1vw;
     padding: 4vw;
@@ -132,8 +139,10 @@ body {
 
 #recycle-list-container {
     width: 100%;
-    margin-top: 6vw;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
 }
+
 .list-box{
     display: flex;
     flex-direction: row;
@@ -143,27 +152,32 @@ body {
     align-items: center;
     box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.5);
 }
+
 .list-box .left-div{
     display: flex;
     flex-direction: column;
 }
+
 .list-content{
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 1vw;
 }
+
 .list-content div{
     width: 9vw;
     display: flex;
     column-gap: 0.5vw;
     align-items: center;
 }
+
 .list-content div div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .list-content p{
     font-size: 1rem;
     font-weight: 500;
@@ -177,19 +191,23 @@ body {
     font-size: 1rem;
     font-weight: 700;
 }
+
 .right-div{
-    margin-left: 9vw;
+    margin-left: 60%;
     display: flex;
     flex-direction: column;
 }
+
 .right-div h1{
     margin: 0;
     font-size: 1rem;
     font-weight: 700;
 }
+
 .right-div h3{
     margin: 0;
 }
+
 .right-div button{
     color: white;
     font-weight: 700;

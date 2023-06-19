@@ -158,6 +158,10 @@ footer {
     flex-wrap: wrap;
 }
 
+.footer_top_right button{
+    cursor: pointer;
+}
+
 .footer_top_right input {
     width: 20vw;
     height: 3vw;
@@ -241,6 +245,7 @@ footer {
 
 .social_icon img {
     width: 3vw;
+    cursor: pointer;
 }
 
 .footer_bottom {
