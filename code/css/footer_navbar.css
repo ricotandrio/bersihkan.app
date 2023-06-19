@@ -267,6 +267,14 @@ button :hover{
     cursor: pointer;
 }
 
+.footer_top_right form button {
+    transition: ease-in-out 0.5s;
+}
+
+.footer_top_right form button:hover {
+    border: 1px solid black;
+}
+
 @media all and (max-width: 768px){
     :root {
         font-size: 14px;
