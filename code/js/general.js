@@ -13,13 +13,11 @@ initializeLocalStorageVariable('user_data', user_data);
 if(localStorage.getItem("userLogin")){
     document.getElementById('logout').style.display = "block";
     document.getElementById('login').style.display = "none";
-    document.getElementById('register').style.display = "none";
     document.getElementById('home-default').style.display = "none";
     document.getElementById('home-logged-in').style.display = "block";
 } else if(!localStorage.getItem("userLogin")){
     document.getElementById('logout').style.display = "none";
     document.getElementById('login').style.display = "block";
-    document.getElementById('register').style.display = "block";
     document.getElementById('admin').style.display = "none";
     document.getElementById('home-default').style.display = "block";
     document.getElementById('home-logged-in').style.display = "none";
