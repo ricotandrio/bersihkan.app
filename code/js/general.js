@@ -44,3 +44,7 @@ document.getElementById('logout').addEventListener('click', function(){
     localStorage.removeItem('userLogin');
     window.location.href = "login.html";
 });
+
+document.querySelector(".footer_top_right form button").addEventListener("click", function(){
+    window.alert("thank you")
+})

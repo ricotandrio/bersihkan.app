@@ -161,6 +161,7 @@ main {
 .bottom-half{
     position: relative;
     display: flex;
+    flex-direction: row;
     background-color: white;
     padding-bottom: 5vw;
 }
@@ -171,6 +172,8 @@ main {
 }
 
 .keuntungan{
+    position: relative;
+    width: 30px;
     padding-left: 5vw;
     flex: 1;
 }
@@ -205,13 +208,6 @@ main {
     font-size: 1.3rem;
 }
 
-.permintaan{
-    flex: 1;
-    width: 25vw;
-    padding-bottom: 3vw;
-    padding-left: 1vw;
-}
-
 .orders{
     border: solid;
     border-color: transparent;
@@ -234,3 +230,20 @@ main {
     height: 3vw;
     width: 3vw;
 }
+
+#request_user {
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+#request_user:hover {
+    background-color: #dafbcb;
+}
+
+.permintaan{
+    flex: 1;
+    width: 25vw;
+    padding-bottom: 3vw;
+    padding-left: 1vw;
+}
+

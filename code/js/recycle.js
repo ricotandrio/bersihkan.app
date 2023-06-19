@@ -113,4 +113,10 @@ if(curMonth < 10) curMonth = '0' + curMonth;
 let curYear = date.getUTCFullYear();
 let currentDate = document.getElementById("date");
 
-// currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
+function removeIframe(){
+    if(document.getElementById("iframe").style.display == "none"){
+        document.getElementById("iframe").style.display = "block";
+    } else {
+        document.getElementById("iframe").style.display = "none";
+    }
+}

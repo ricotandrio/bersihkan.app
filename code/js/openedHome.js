@@ -60,3 +60,7 @@ function counter(){
 }
 
 counter();
+
+document.getElementById("request_user").addEventListener("click", function(){
+    window.location.href = "./recycle-list.html";
+})
