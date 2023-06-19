@@ -18,12 +18,18 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     if(weight <= 0){
         window.alert("Weight of item cannot be negative integer");
     }
-    var currentDate = new Date();
-    var userDate = new Date(date);
-    // if(userDate <= currentDate){
-    //     alert(`Pick up date must be greater than ${currentDate}`);
-    //     return;
-    // }
+
+    var curDate = date.getDate();
+    var curMonth = date.getMonth() + 1;
+
+    if(curDate < 10) curDate = '0' + curDate;
+    if(curMonth < 10) curMonth = '0' + curMonth;
+
+    var curYear = date.getUTCFullYear();
+    var currentDate = document.getElementById("date");
+
+    currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
+
 
     if(!check){
         window.alert("You must be responsible for the information");
@@ -104,38 +110,4 @@ function showList(){
     }
 }
 
-// function showList(){
-//     var orderList = JSON.parse(localStorage.getItem("order_data"));
-//     if(orderList.length != 0){
-//         document.getElementById('no-order-list').style.display = "none";
-//         for (let i = 0; i < orderList.length; i++) {
-//             if(orderList[i].progress != "done"){
-//                 temp.innerHTML += `<div class="recycle-list">
-//                                         <div class="information"><h1>${orderList[i].date}</h1></div>
-//                                         <div class="information"><h3>${orderList[i].place}</h3></div>
-//                                         <div class="information"><h2>${orderList[i].weight} kg</h2></div>
-//                                         <div class="information"><h4>${orderList[i].notes}</h4></div>
-//                                         <button onclick="cancelOrder(${i})">Cancel</button>
-//                                     </div>`
-//             }
-//         }
-//     } else{
-//         document.getElementById('no-order-list').style.display = "block";
-//     }
-// }
-
 showList();
-
-var date = new Date();
-var curDate = date.getDate();
-var curMonth = date.getMonth() + 1;
-
-if(curDate < 10) curDate = '0' + curDate;
-if(curMonth < 10) curMonth = '0' + curMonth;
-
-var curYear = date.getUTCFullYear();
-var currentDate = document.getElementById("date");
-
-currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
-
-
