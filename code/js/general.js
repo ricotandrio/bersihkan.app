@@ -1,5 +1,5 @@
 var user_data = [
-    {"name": "user001", "email": "user@gmail.com", "password": "admin135246", "point": 0, "order": []}
+    {"name": "Admin", "email": "admin@gmail.com", "password": "12345678", "point": 0, "order": []}
 ];
 
 function initializeLocalStorageVariable(variableName, defaultValue) {
@@ -16,7 +16,7 @@ if(localStorage.getItem("userLogin")){
     document.getElementById('register').style.display = "none";
     document.getElementById('home-default').style.display = "none";
     document.getElementById('home-logged-in').style.display = "block";
-} else {
+} else if(!localStorage.getItem("userLogin")){
     document.getElementById('logout').style.display = "none";
     document.getElementById('login').style.display = "block";
     document.getElementById('register').style.display = "block";
@@ -28,7 +28,7 @@ if(localStorage.getItem("userLogin")){
 if(localStorage.getItem("userLogin")){
     var loggedIn = JSON.parse(localStorage.getItem("userLogin"));
 
-    if(loggedIn.name === "user001") document.getElementById('admin').style.display = "block";
+    if(loggedIn.email === "admin@gmail.com") document.getElementById('admin').style.display = "block";
     else document.getElementById('admin').style.display = "none";
 }
 
