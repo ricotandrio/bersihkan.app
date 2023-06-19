@@ -8,7 +8,7 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
     var temp_data = JSON.parse(data_user_storage);
     for(let i = 0; i < temp_data.length; i++){
         console.log(temp_data[i].email + " " + temp_data[i].password);
-        if(email === temp_data[i].email && pass === temp_data[i].password && email === "user@gmail.com"){
+        if(email === temp_data[i].email && pass === temp_data[i].password && email === "admin@gmail.com"){
             localStorage.setItem('userLogin', JSON.stringify(temp_data[i]));
             window.location.href = "admin.html";
             return;

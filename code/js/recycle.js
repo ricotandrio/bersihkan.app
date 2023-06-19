@@ -111,3 +111,12 @@ function showList(){
 }
 
 showList();
+
+var date = new Date();
+var currDate = date.getDate();
+var currMonth = date.getMonth() + 1;
+if(currDate < 10) currDate = '0' + currDate;
+if(currMonth < 10) currMonth = '0' + currMonth;
+var currYear = date.getUTCFullYear();
+var inputDate = document.getElementById('date');
+inputDate.setAttribute("min", currYear + "-" + currMonth + "-" + currDate);
