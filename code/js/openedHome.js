@@ -29,12 +29,13 @@ function counter(){
     let done_status = 0;
     let decline_status = 0;
     order.forEach(orderAt => {
+        console.log(orderAt.progress)
         if(orderAt.email == loggedIn.email){
-            if(orderAt.progress == "process"){
+            if(orderAt.progress == "confirmation" || orderAt.progress == "process"){
                 process_status += 1;
-            } else if (orderAt.process == "decline") {
+            } else if (orderAt.progress == "decline") {
                 decline_status += 1;
-            } else if (orderAt.process == "done") {
+            } else if (orderAt.progress == "done") {
                 done_status += 1;
             }
         }
