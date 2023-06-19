@@ -107,3 +107,17 @@ main {
     text-align: center;
 }
 
+.password_icon_container {
+    position: absolute;
+    right: 39%;
+    top: 20vw;
+}
+
+.password_icon_container > input {
+    border: 0;
+    display: none;
+}
+
+#viewOpen {
+    display: none;
+}

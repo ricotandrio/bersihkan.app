@@ -41,3 +41,17 @@ document.getElementById('pass2').addEventListener('keyup', (event) =>{
     if(pass.length < 8 && pass.length > 0) document.getElementById("text-Fail").innerHTML = "Password must be more or equal to 8 characters long";
     else document.getElementById("text-Fail").innerHTML = "";
 })
+
+const hidePass = document.getElementById("hide_pass");
+hidePass.addEventListener("change", function(){
+    let pass = document.getElementById("pass2");
+    if(pass.type === "password"){
+        pass.type = "text";
+        document.getElementById("viewOpen").style.display = "block";
+        document.getElementById("viewClose").style.display = "none";
+    } else {
+        pass.type = "password";
+        document.getElementById("viewOpen").style.display = "none";
+        document.getElementById("viewClose").style.display = "block";
+    }
+})
