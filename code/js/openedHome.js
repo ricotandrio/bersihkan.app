@@ -33,7 +33,7 @@ function counter(){
         if(orderAt.email == loggedIn.email){
             if(orderAt.progress == "confirmation" || orderAt.progress == "process"){
                 process_status += 1;
-            } else if (orderAt.progress == "decline") {
+            } else if (orderAt.progress == "declined") {
                 decline_status += 1;
             } else if (orderAt.progress == "done") {
                 done_status += 1;

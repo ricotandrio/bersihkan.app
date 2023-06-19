@@ -42,12 +42,14 @@ header img {
     right: 3vw; */
     width: 3vw;
 }
-.coin-container{
+
+#coin-container{
     display: flex;
     position: relative;
     align-items: center;
 }
-.coin-container div{
+
+#coin-container div{
     border: 1px solid black;
     width: 5vw;
     border-radius: 2.5vw;
@@ -55,13 +57,15 @@ header img {
     padding-left: 2vw;
     font-size: 0.8rem;
 }
-.coin-container img{
+
+#coin-container img{
     position: absolute;
 }
 
 .user-profile-container{
     display: flex;
 }
+
 .icon_bars {
     position: relative;
     width: 2vw;

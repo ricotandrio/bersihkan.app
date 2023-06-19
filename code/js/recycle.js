@@ -27,13 +27,12 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     var progress;
     let compareDate = new Date(userDate);
     let date = new Date();
-    console.log(userDate);
+    console.log(date);
     console.log(compareDate);
     if(compareDate < date) progress = "confirmation";
     else progress = "process";
 
-    let pointPlus = Math.floor(weight * 1000);
-    loggedIn.order.push({"pointPlus": pointPlus, "place": place, "date": userDate, "weight": weight, "notes": notes});
+    loggedIn.order.push({"pointPlus": weight, "place": place, "date": userDate, "weight": weight, "notes": notes});
     if(!localStorage.getItem('order_data')){
         var orderData = [];
         orderData.push({"place": place, "date": userDate, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});

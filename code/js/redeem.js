@@ -42,6 +42,7 @@ function redeemTransaction(index){
             break;
         }
     }
+    location.reload();
     return;
 }
 
@@ -52,5 +53,6 @@ function exclusive(){
     }
 
     window.alert("Contact admin to redeem exclusive product");
+    location.reload();
     return;
 }
