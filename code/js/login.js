@@ -32,3 +32,16 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 console.log(JSON.parse(data_user_storage).length);
 
+const hidePass = document.getElementById("hide_pass");
+hidePass.addEventListener("change", function(){
+    let pass = document.getElementById("pass2");
+    if(pass.type === "password"){
+        pass.type = "text";
+        document.getElementById("viewOpen").style.display = "block";
+        document.getElementById("viewClose").style.display = "none";
+    } else {
+        pass.type = "password";
+        document.getElementById("viewOpen").style.display = "none";
+        document.getElementById("viewClose").style.display = "block";
+    }
+})
