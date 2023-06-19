@@ -19,7 +19,17 @@
             </div>
         </label>
         <h1>bersihkan</h1>
-        <img src="../asset/user.png" alt="">
+        <div class="right-section">
+            <div class="coin-container">
+                <img src="../asset/coin.png" alt="">
+                <div>
+                    0123
+                </div>
+            </div>
+            <div class="user-profile-container">
+                <img src="../asset/user.png" alt="">
+            </div>
+        </div>
     </header>
     <nav class="side_nav">
         <ul>
@@ -74,17 +84,17 @@
                 <div class="permintaan">
                     <h1>Permintaan saya</h1>
                     <div class="orders">
-                        <div class="process">
+                        <div class="process" id="process">
                             <img src="../asset\icon _map.png" alt="">
-                            <p>diproses</p>
+                            <p>diproses<span id="process_info"></span></p>
                         </div>
-                        <div class="pick-up">
+                        <div class="pick-up" id="pick-up">
                             <img src="../asset\process.png" alt="">
-                            <p>penjemputan</p>
+                            <p>penjemputan</p><span id="pick-up_info"></span>
                         </div>
-                        <div class="failed">
+                        <div class="failed" id="failed">
                             <img src="../asset\cancel.png" alt="">
-                            <p>gagal</p>
+                            <p>gagal</p><span id="failed_info"></span>
                         </div>
                     </div>
                 </div>
