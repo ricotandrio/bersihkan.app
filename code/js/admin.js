@@ -9,11 +9,14 @@ var userData = JSON.parse(localStorage.getItem('user_data'));
 const container = document.getElementById("user_request");
 function showRequests(){
     var temp = "";
-    var processType = 0; var doneType = 0; var needConfirmType = 0;
+    var processType = 0;
+    var doneType = 0;
+    var needConfirmType = 0;
+    var declinedType = 0;
     console.log(requestOrder[0])
     for(let i = 0; i < requestOrder.length; i++){
         if(requestOrder[i].progress == "confirmation"){
-            temp += `<div class="request ${requestOrder[i].progress}" onclick="checkType(${i})">
+            temp += `<div class="request ${requestOrder[i].progress}">
                         <div class="left">
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
@@ -22,16 +25,16 @@ function showRequests(){
                             </div>
                         </div>
                         <div class="right">
-                            <h3> Status </h3>
-                            <h1 id="requestType">${requestOrder[i].progress}</h1>
+                            <h3>Status:</h3>
+                            <h1 id="requestType">Need Confirmation</h1>
                             <div class="button_type_container">
-                                <button id="accept_btn">Accept</button>
-                                <button id="decline_btn">Decline</button>
+                                <button id="accept_btn" onclick="checkType(${i})">Accept</button>
+                                <button id="decline_btn" onclick="declineOrder(${i})">Decline</button>
                             </div>
                         </div>
                     </div>`;
         } else if(requestOrder[i].progress == "process"){
-            temp += `<div class="request ${requestOrder[i].progress}" onclick="checkType(${i})">
+            temp += `<div class="request ${requestOrder[i].progress}">
                         <div class="left">
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
@@ -40,13 +43,16 @@ function showRequests(){
                             </div>
                         </div>
                         <div class="right">
-                            <h3> Status </h3>
-                            <h1 id="requestType">${requestOrder[i].progress}</h1>
-                            <button id="decline_btn">Decline</button>
+                            <h3>Status:</h3>
+                            <h1 id="requestType">On Process</h1>
+                            <button id="decline_btn" onclick="declineOrder(${i})">Decline</button>
                         </div>
                     </div>`;
         } else {
-            temp += `<div class="request ${requestOrder[i].progress}" onclick="checkType(${i})">
+            var requestOrderStatus;
+            if(requestOrder[i].progress == "declined") requestOrderStatus = "Declined";
+            else requestOrderStatus = "Done";
+            temp += `<div class="request ${requestOrder[i].progress}">
                         <div class="left">
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
@@ -55,47 +61,68 @@ function showRequests(){
                             </div>
                         </div>
                         <div class="right">
-                            <h1 id="requestType">${requestOrder[i].progress}</h1>
+                            <h3>Status:</h3>
+                            <h1 id="requestType">${requestOrderStatus}</h1>
                         </div>
                     </div>`;
         }
         if(requestOrder[i].progress == "process") processType += 1;
         else if(requestOrder[i].progress == "confirmation") needConfirmType += 1;
         else if(requestOrder[i].progress == "done") doneType += 1;
+        else if(requestOrder[i].progress == "declined") declinedType += 1;
     }
     container.innerHTML = temp;
     document.getElementById("process_num").innerHTML = processType;
     document.getElementById("confirm_num").innerHTML = needConfirmType;
     document.getElementById("done_num").innerHTML = doneType;
+    document.getElementById("declined_num").innerHTML = declinedType;
+    return;
 }
 
 showRequests();
 
 function checkType(index){
-    if(requestOrder[index].progress === "confirmation"){
-        alert("Enter");
-        requestOrder[index].progress = "done";
-        for (let i = 0; i < userData.length; i++) {
-            if(userData[i].email == requestOrder[index].email){
-                alert("Enter 3");
-                for (let j = 0; j < userData[i].order.length; j++){
-                    if(userData[i].order[j].date == requestOrder[index].date && userData[i].order[j].place == requestOrder[index].place && userData[i].order[j].weight == requestOrder[index].weight && userData[i].order[j].notes == requestOrder[index].notes){
-                        userData[i].point += userData[i].order[j].pointPlus;
-                        userData[i].order.splice(j, 1);
-                        localStorage.setItem('user_data', JSON.stringify(userData));
-                        localStorage.setItem('order_data', JSON.stringify(requestOrder));
-                        console.log("Name: " + userData[i].name);
-                        console.log("Point: " + userData[i].point);
-                        console.log("email: " + userData[i].email);
-                        console.log("Order: " + userData[i].order);
-                        showRequests();
-                        return;
-                    }
+    requestOrder[index].progress = "done";
+    for (let i = 0; i < userData.length; i++) {
+        if(userData[i].email == requestOrder[index].email){
+            for (let j = 0; j < userData[i].order.length; j++){
+                if(userData[i].order[j].date == requestOrder[index].date && userData[i].order[j].place == requestOrder[index].place && userData[i].order[j].weight == requestOrder[index].weight && userData[i].order[j].notes == requestOrder[index].notes){
+                    userData[i].point += userData[i].order[j].pointPlus;
+                    userData[i].order.splice(j, 1);
+                    localStorage.setItem('user_data', JSON.stringify(userData));
+                    localStorage.setItem('order_data', JSON.stringify(requestOrder));
+                    console.log("Name: " + userData[i].name);
+                    console.log("Point: " + userData[i].point);
+                    console.log("email: " + userData[i].email);
+                    console.log("Order: " + userData[i].order);
+                    showRequests();
+                    return;
                 }
             }
         }
     }
     return;
+}
+
+function declineOrder(index){
+    requestOrder[index].progress = "declined";
+    for (let i = 0; i < userData.length; i++) {
+        if(userData[i].email == requestOrder[index].email){
+            for (let j = 0; j < userData[i].order.length; j++){
+                if(userData[i].order[j].date == requestOrder[index].date && userData[i].order[j].place == requestOrder[index].place && userData[i].order[j].weight == requestOrder[index].weight && userData[i].order[j].notes == requestOrder[index].notes){
+                    userData[i].order.splice(j, 1);
+                    localStorage.setItem('user_data', JSON.stringify(userData));
+                    localStorage.setItem('order_data', JSON.stringify(requestOrder));
+                    console.log("Name: " + userData[i].name);
+                    console.log("Point: " + userData[i].point);
+                    console.log("email: " + userData[i].email);
+                    console.log("Order: " + userData[i].order);
+                    showRequests();
+                    return;
+                }
+            }
+        }
+    }    
 }
 
 document.getElementById("confirmation_btn").addEventListener("click", function(){

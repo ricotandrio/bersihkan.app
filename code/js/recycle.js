@@ -24,22 +24,23 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
         return;
     }
 
-    let date = new Date();
     var progress;
+    let compareDate = new Date(userDate);
+    let date = new Date();
     console.log(userDate);
-    console.log(date);
-    if(userDate < date) progress = "confirmation";
+    console.log(compareDate);
+    if(compareDate < date) progress = "confirmation";
     else progress = "process";
 
     let pointPlus = Math.floor(weight * 1000);
-    loggedIn.order.push({"pointPlus": pointPlus, "place": place, "date": date, "weight": weight, "notes": notes});
+    loggedIn.order.push({"pointPlus": pointPlus, "place": place, "date": userDate, "weight": weight, "notes": notes});
     if(!localStorage.getItem('order_data')){
         var orderData = [];
-        orderData.push({"place": place, "date": date, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});
+        orderData.push({"place": place, "date": userDate, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});
         localStorage.setItem('order_data', JSON.stringify(orderData));
     } else{
         var orderData = JSON.parse(localStorage.getItem('order_data'));
-        orderData.push({"place": place, "date": date, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});
+        orderData.push({"place": place, "date": userDate, "weight": weight, "email": loggedIn.email, "notes": notes, "progress": progress});
         localStorage.setItem('order_data', JSON.stringify(orderData));
     }
 
@@ -104,13 +105,13 @@ function showList(){
 showList();
 
 let date = new Date();
-var curDate = date.getDate();
-var curMonth = date.getMonth() + 1;
+let curDate = date.getDate();
+let curMonth = date.getMonth() + 1;
 
 if(curDate < 10) curDate = '0' + curDate;
 if(curMonth < 10) curMonth = '0' + curMonth;
 
-var curYear = date.getUTCFullYear();
-var currentDate = document.getElementById("date");
+let curYear = date.getUTCFullYear();
+let currentDate = document.getElementById("date");
 
-currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
+// currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
