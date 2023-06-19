@@ -254,6 +254,10 @@ footer {
     font-size: 1.5rem;
 }
 
+button :hover{
+    cursor: pointer;
+}
+
 @media all and (max-width: 768px){
     :root {
         font-size: 14px;

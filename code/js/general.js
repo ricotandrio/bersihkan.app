@@ -26,8 +26,16 @@ if(localStorage.getItem("userLogin")){
 if(localStorage.getItem("userLogin")){
     var loggedIn = JSON.parse(localStorage.getItem("userLogin"));
 
-    if(loggedIn.email === "admin@gmail.com") document.getElementById('admin').style.display = "block";
-    else document.getElementById('admin').style.display = "none";
+    if(loggedIn.email === "admin@gmail.com"){
+        document.getElementById('admin').style.display = "block";
+        document.getElementById('home-logged-in').style.display = "none";
+        document.getElementById('about').style.display = "none";
+        document.getElementById('recycle').style.display = "none";
+    }
+    else{
+        document.getElementById('admin').style.display = "none";
+        
+    }
 }
 
 document.getElementById('logout').addEventListener('click', function(){
