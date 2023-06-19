@@ -13,7 +13,7 @@ for (let i = 0; i < productRedeem.length; i++) {
                             <h2>${productRedeem[i].point} Point</h2>
                             <h3>Rating: ${productRedeem[i].rating}</h3>
                             <button class="redeem-btn" onclick="redeemTransaction(${i})">REDEEM</button>
-                        </div>`
+                        </div>`;
 }
 
 var userLogged = localStorage.getItem("userLogin");
