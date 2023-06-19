@@ -122,17 +122,21 @@ function declineOrder(index){
                 }
             }
         }
-    }    
+    }
 }
 
 document.getElementById("confirmation_btn").addEventListener("click", function(){
-    window.location.href = "template.html";
+    document.querySelector(".confirmation").scrollIntoView({block: "start", behavior: "smooth"});
 });
 
 document.getElementById("process_btn").addEventListener("click", function(){
-    window.location.href = "template.html";
+    document.querySelector(".process").scrollIntoView({block: "start", behavior: "smooth"});
 });
 
 document.getElementById("done_btn").addEventListener("click", function(){
-    window.location.href = "template.html";
+    document.querySelector(".done").scrollIntoView({block: "start", behavior: "smooth"});
+});
+
+document.getElementById("declined_btn").addEventListener("click", function(){
+    document.querySelector(".declined").scrollIntoView({block: "start", behavior: "smooth"});
 });
