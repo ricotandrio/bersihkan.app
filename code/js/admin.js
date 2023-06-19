@@ -1,47 +1,10 @@
-var admindata = [
-    {"username": "Bersihkan", "poin": "32674", "status": "active", "account": "admin"},
-    {"username": "Jane Smith", "poin": "500", "status": "inactive", "account": "admin"},
-    {"username": "Michael Johnson", "poin": "10000", "status": "inactive", "account": "admin"},
-    {"username": "Emily Brown", "poin": "2500", "status": "active", "account": "user"},
-    {"username": "David Wilson", "poin": "750", "status": "active", "account": "user"},
-];
-
-function initializeLocalStorageVariable(variableName, defaultValue) {
-    if (!localStorage.getItem(variableName)) {
-      localStorage.setItem(variableName, JSON.stringify(defaultValue));
-    }
-}
-
-// initializeLocalStorageVariable('order_data', {"progress": "","email": "", "date": ""});
+var loggedIn = JSON.parse(localStorage.getItem("userLogin"));
 
 const user = document.getElementById("user_info");
-user.innerHTML = `<h1>Welcome, ${admindata[0].username} (${admindata[0].account})</h1>`
+user.innerHTML = `<h1>Welcome, ${loggedIn.name}</h1>`
 
 var requestOrder = JSON.parse(localStorage.getItem('order_data'));
 var userData = JSON.parse(localStorage.getItem('user_data'));
-
-// var request = [
-//     {"name": "John Doe", "date": "30 March 2023", "time": "11:20", "type": "process"},
-//     {"name": "Jane Smith", "date": "30 March 2023", "time": "11:20", "type": "need confirmation"},
-//     {"name": "Michael Johnson", "date": "30 March 2023", "time": "11:20", "type": "done"},
-//     {"name": "Emily Brown", "date": "30 March 2023", "time": "11:20", "type": "cancel"},
-//     {"name": "David Wilson", "date": "15 April 2023", "time": "09:45", "type": "process"},
-//     {"name": "Olivia Davis", "date": "15 April 2023", "time": "09:45", "type": "need confirmation"},
-//     {"name": "Sophia Martinez", "date": "15 April 2023", "time": "09:45", "type": "done"},
-//     {"name": "Daniel Anderson", "date": "15 April 2023", "time": "09:45", "type": "cancel"},
-//     {"name": "Ava Taylor", "date": "5 May 2023", "time": "14:30", "type": "process"},
-//     {"name": "Mia Clark", "date": "5 May 2023", "time": "14:30", "type": "need confirmation"},
-//     {"name": "William White", "date": "5 May 2023", "time": "14:30", "type": "done"},
-//     {"name": "Sophia Turner", "date": "5 May 2023", "time": "14:30", "type": "cancel"},
-//     {"name": "James Moore", "date": "20 June 2023", "time": "16:15", "type": "process"},
-//     {"name": "Emma Brooks", "date": "20 June 2023", "time": "16:15", "type": "need confirmation"},
-//     {"name": "Benjamin Reed", "date": "20 June 2023", "time": "16:15", "type": "done"},
-//     {"name": "Isabella Turner", "date": "20 June 2023", "time": "16:15", "type": "cancel"},
-//     {"name": "Alexander Cooper", "date": "10 July 2023", "time": "08:00", "type": "process"},
-//     {"name": "Charlotte Young", "date": "10 July 2023", "time": "08:00", "type": "need confirmation"},
-//     {"name": "Daniel Scott", "date": "10 July 2023", "time": "08:00", "type": "done"},
-//     {"name": "Ella Adams", "date": "10 July 2023", "time": "08:00", "type": "cancel"}
-// ]
 
 const container = document.getElementById("user_request");
 function showRequests(){

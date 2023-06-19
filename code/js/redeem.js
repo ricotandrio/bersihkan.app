@@ -20,6 +20,11 @@ var userLogged = localStorage.getItem("userLogin");
 var loggedIn = JSON.parse(userLogged);
 
 function redeemTransaction(index){
+    if(!localStorage.getItem("userLogin")){
+        window.location.href = "./login.html";
+        return;
+    }
+
     console.log(loggedIn.point);
     if(productRedeem[index].point > loggedIn.point){
         alert("Point is not enough");
@@ -41,5 +46,11 @@ function redeemTransaction(index){
 }
 
 function exclusive(){
-    window.alert("Contact admin to redeem exclusive product")
+    if(!localStorage.getItem("userLogin")){
+        window.location.href = "./login.html";
+        return;
+    }
+
+    window.alert("Contact admin to redeem exclusive product");
+    return;
 }

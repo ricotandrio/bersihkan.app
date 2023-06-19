@@ -48,6 +48,8 @@ formButton.addEventListener("click", function(event){
     event.preventDefault();
     if(!localStorage.getItem("userLogin")){
         window.alert("Please login first");
+        window.location.href = "./login.html";
+        return;
     }
     var name = getname();
     var msg = document.getElementById("message_text");
