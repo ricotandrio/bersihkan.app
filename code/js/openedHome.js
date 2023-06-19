@@ -30,7 +30,7 @@ function counter(){
     let decline_status = 0;
     order.forEach(orderAt => {
         if(orderAt.email == loggedIn.email){
-            if(orderAt.progress == "process"){
+            if(orderAt.progress == "confirmation" || orderAt.progress == "process"){
                 process_status += 1;
             } else if (orderAt.process == "decline") {
                 decline_status += 1;
