@@ -30,13 +30,38 @@ header h1 {
     padding: 0.5vw;
     font-family: 'Kaushan Script', 'Poppins', sans-serif;
 }
-
-header img {
+.right-section{
+    display: flex;
+    flex-direction: row;
     position: absolute;
     right: 3vw;
+    column-gap: 2vw;
+}
+header img {
+    /* position: absolute;
+    right: 3vw; */
     width: 3vw;
 }
+.coin-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.coin-container div{
+    border: 1px solid black;
+    width: 5vw;
+    border-radius: 2.5vw;
+    margin-left: 1vw;
+    padding-left: 2vw;
+    font-size: 0.8rem;
+}
+.coin-container img{
+    position: absolute;
+}
 
+.user-profile-container{
+    display: flex;
+}
 .icon_bars {
     position: relative;
     width: 2vw;
