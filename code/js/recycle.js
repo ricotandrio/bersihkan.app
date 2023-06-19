@@ -19,18 +19,6 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
         window.alert("Weight of item cannot be negative integer");
     }
 
-    var curDate = date.getDate();
-    var curMonth = date.getMonth() + 1;
-
-    if(curDate < 10) curDate = '0' + curDate;
-    if(curMonth < 10) curMonth = '0' + curMonth;
-
-    var curYear = date.getUTCFullYear();
-    var currentDate = document.getElementById("date");
-
-    currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
-
-
     if(!check){
         window.alert("You must be responsible for the information");
         return;
@@ -111,3 +99,15 @@ function showList(){
 }
 
 showList();
+
+var date = new Date();
+var curDate = date.getDate();
+var curMonth = date.getMonth() + 1;
+
+if(curDate < 10) curDate = '0' + curDate;
+if(curMonth < 10) curMonth = '0' + curMonth;
+
+var curYear = date.getUTCFullYear();
+var currentDate = document.getElementById("date");
+
+currentDate.setAttribute("min", curYear + "-" + curMonth + "-" + curDate);
