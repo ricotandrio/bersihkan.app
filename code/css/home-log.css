@@ -73,7 +73,6 @@ main {
 .options{
     display: flex;
     justify-content: space-evenly;
-    /* border: 1px solid red; */
     height: 25vw;
     width: 100%;
     background-color: white;
@@ -94,9 +93,6 @@ main {
 }
 
 .recycle, .redeem, .forum{
-    /* top: 16vw;
-    position: absolute; */
-    /* height: 15vw; */
     margin: 2vw 0;
     width: 15vw;
     margin-top: 4vw;
@@ -112,7 +108,6 @@ main {
 }
 
 .recycle:hover, .redeem:hover, .forum:hover{
-    /* background-color: red; */
     height: 20vw;
     width: 20vw;
 }

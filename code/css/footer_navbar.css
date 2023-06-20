@@ -25,7 +25,6 @@ header {
 }
 
 header h1 {
-    /* border: 1px solid black; */
     font-size: 1.2rem;
     padding: 0.5vw;
     font-family: 'Kaushan Script', 'Poppins', sans-serif;
@@ -38,8 +37,6 @@ header h1 {
     column-gap: 2vw;
 }
 header img {
-    /* position: absolute;
-    right: 3vw; */
     width: 3vw;
 }
 

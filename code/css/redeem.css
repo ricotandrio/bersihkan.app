@@ -98,8 +98,6 @@ button:focus {
 
 .card {
     width: 20%;
-    /* padding: 3vw; */
-    /* box-shadow: 0px 0px 20px rgba(11, 11, 11, 0.2); */
     transition: ease-in-out 0.5s;
     padding: 1vw;
 }

@@ -23,11 +23,9 @@ main {
     width: 97%;
     color: black;
     padding: 1vw;
-    /* border: 1px solid black; */
 }
 
 .forum_nav_bar {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,7 +37,6 @@ main {
 }
 
 .comment_section {
-    /* border: 1px solid black; */
     padding: 2vw;
 }
 
@@ -68,7 +65,6 @@ main {
     position: fixed;
     bottom: 0;
     z-index: 5;
-    /* border: 1px solid black; */
     width: inherit;
     height: 4vw;
     padding: 1vw;
@@ -80,7 +76,6 @@ main {
 
 .sticky_add_forum form {
     width: inherit;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     align-items: center;

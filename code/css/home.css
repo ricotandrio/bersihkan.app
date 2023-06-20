@@ -25,7 +25,6 @@ header {
 }
 
 header h1 {
-    /* border: 1px solid black; */
     font-size: 1.2rem;
     padding: 0.5vw;
     font-family: 'Kaushan Script', 'Poppins', sans-serif;
@@ -112,7 +111,6 @@ nav ul li:hover {
 footer {
     width: 97%;
     padding: 1vw;
-    /* border: 1px solid black; */
     border-top: 2px solid black;
 }
 
@@ -340,7 +338,6 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* height: 40vw; */
     align-items: center;
     padding-bottom: 10vw;
     padding-top: 5vw;
@@ -352,7 +349,6 @@ main {
 
 .main-info{
     margin-top: 1vw;
-    /* height: 30vw; */
     width: 80vw;
 }
 
@@ -364,19 +360,16 @@ main {
 
 .main-info img{
     object-fit: contain;
-    /* height: 20vw; */
     width: 20vw;
 }
 
 .info-text-1, .info-text-3{
     padding-left: 2vw;
-    /* height: 18vw; */
     flex: 1;
 }
 
 .info-text-2{
     padding-right: 2vw;
-    /* height: 18vw; */
     flex: 1;
     text-align: right;
 }
@@ -406,7 +399,6 @@ input[type="radio"]:checked~ {
 }
 
 .new_section {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,7 +409,6 @@ input[type="radio"]:checked~ {
 }
 
 .new_section > div {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -476,54 +467,6 @@ input[type="radio"]:checked~ {
     width: 20%;
     border-bottom: 0.1em solid black;
     margin-bottom: 0.9em;
-}
-
-.card_garbage_container {
-    width: 100% - 5vw;
-    display: flex;
-    padding-bottom: 5vw;
-    flex-direction: column;
-    gap: 2vw;
-    padding-left: 5vw;
-}
-
-.garbage {
-    position: relative;
-    width: 20%;
-}
-
-.image_garbage {
-    width: 100%;
-    height: 20vw;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
-}
-
-.image_garbage img {
-    width: 100%;
-    height: 100%;
-}
-
-.text_image {
-    position: absolute;
-    width: 200%;
-    display: none;
-    top: 0;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
-    z-index: -1;
-}
-
-.text_image p {
-    padding: 1em;
-    margin: 0;
-}
-
-.text_image h3 {
-    padding-left: 1.5vw;
-}
-
-.image_garbage:hover ~ .text_image {
-    left: 120%;
-    display: block;
 }
 
 @media all and (max-width: 768px){
