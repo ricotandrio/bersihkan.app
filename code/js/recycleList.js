@@ -24,10 +24,10 @@ function showRequests(index){
         status = "declined";
         statusText = "Declined";
     }
-    
     for(let i = 0; i < loggedIn.order.length; i++){
+        console.log(loggedIn.order[i].progress)
         if(status == loggedIn.order[i].progress && index != 1){
-            temp += `<div class="list-box">
+            temp += `<div class="list-box ${loggedIn.order[i].progress}">
                         <div class="left-div">
                             <div class="list-content">
                                 <div>
@@ -76,7 +76,7 @@ function showRequests(index){
                         </div>
                     </div>`;
         } else if(status == loggedIn.order[i].progress){
-            temp += `<div class="list-box">
+            temp += `<div class="list-box ${loggedIn.order[i].progress}">
                         <div class="left-div">
                             <div class="list-content">
                                 <div>

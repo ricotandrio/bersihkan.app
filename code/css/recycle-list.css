@@ -226,3 +226,23 @@ main {
     border-radius: 2vw;
     background-color: #F44336;
 }
+
+.process, .confirmation, .done, .declined {
+    transition: ease-in-out 0.5s;
+}
+
+.process:hover {
+    background-color: #00BFFF;
+}
+
+.confirmation:hover {
+    background-color: #FFC857;
+}
+
+.done:hover {
+    background-color: #c8ef1a;
+}
+
+.declined:hover {
+    background-color: #F44336;
+}
