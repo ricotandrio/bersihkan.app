@@ -1,3 +1,7 @@
+document.getElementById("request_user").addEventListener("click", function(){
+    window.location.href = "./recycle-list.html";
+});
+
 var temp = document.getElementById('username');
 var loggedIn = JSON.parse(localStorage.getItem("userLogin"));
 console.log(loggedIn);
@@ -61,7 +65,3 @@ function counter(){
 }
 
 counter();
-
-document.getElementById("request_user").addEventListener("click", function(){
-    window.location.href = "./recycle-list.html";
-});
