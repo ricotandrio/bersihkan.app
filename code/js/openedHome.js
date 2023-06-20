@@ -8,7 +8,8 @@ console.log(loggedIn);
 temp.innerHTML = `<h1>Welcome, ${loggedIn.name}</h1>`
 
 var userPoint = document.getElementById('balance');
-userPoint.innerHTML += `<h2>${loggedIn.historyPoint} point</h2>`;
+let pointHistory = loggedIn.historyPoint.toLocaleString("id");
+userPoint.innerHTML += `<h2>${pointHistory} point</h2>`;
 document.getElementById("recycle-bar").innerHTML += `<p>Recycle x${loggedIn.recycle}</p>`;
 
 document.getElementById("recycle2").addEventListener("click", function(){

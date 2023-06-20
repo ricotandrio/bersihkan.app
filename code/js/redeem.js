@@ -7,10 +7,11 @@ var productRedeem = [
 var temp = document.getElementById('card_container_id');
 
 for (let i = 0; i < productRedeem.length; i++) {
+    let pointNumber = productRedeem[i].point.toLocaleString("id");
     temp.innerHTML += `<div class="card">
                             <img src="${productRedeem[i].photo}" alt="">
                             <h1>${productRedeem[i].name}</h1>
-                            <h2>${productRedeem[i].point} Point</h2>
+                            <h2>${pointNumber} Point</h2>
                             <h3>Rating: ${productRedeem[i].rating}</h3>
                             <button class="redeem-btn" onclick="redeemTransaction(${i})">REDEEM</button>
                         </div>`;

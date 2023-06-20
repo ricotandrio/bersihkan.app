@@ -13,17 +13,18 @@ function showRequests(){
     var doneType = 0;
     var needConfirmType = 0;
     var declinedType = 0;
-    console.log(requestOrder[0])
+    console.log(requestOrder[0]);
     for(let i = 0; i < requestOrder.length; i++){
+        let weightText = requestOrder[i].weight.toLocaleString("id");
         if(requestOrder[i].progress == "confirmation"){
             temp += `<div class="request ${requestOrder[i].progress}">
                         <div class="left">
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
-                                <h2>Date: ${requestOrder[i].date}</h2>
-                                <h2>Weight: ${requestOrder[i].weight} Grams</h2>
                                 <h2>Location: ${requestOrder[i].place}</h2>
+                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Weight: ${weightText} Grams</h2>
                                 <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
                         </div>
@@ -42,9 +43,9 @@ function showRequests(){
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
-                                <h2>Date: ${requestOrder[i].date}</h2>
-                                <h2>Weight: ${requestOrder[i].weight} Grams</h2>
                                 <h2>Location: ${requestOrder[i].place}</h2>
+                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Weight: ${weightText} Grams</h2>
                                 <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
                         </div>
@@ -63,9 +64,9 @@ function showRequests(){
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
-                                <h2>Date: ${requestOrder[i].date}</h2>
-                                <h2>Weight: ${requestOrder[i].weight} Grams</h2>
                                 <h2>Location: ${requestOrder[i].place}</h2>
+                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Weight: ${weightText} Grams</h2>
                                 <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
                         </div>

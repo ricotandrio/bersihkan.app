@@ -26,7 +26,7 @@ function showRequests(index){
         statusText = "Declined";
     }
     for(let i = 0; i < loggedIn.order.length; i++){
-        console.log(loggedIn.order[i].progress)
+        let weightText = loggedIn.order[i].weight.toLocaleString("id");
         if(status == loggedIn.order[i].progress && index != 1){
             temp += `<div class="list-box ${loggedIn.order[i].progress}">
                         <div class="left-div">
@@ -58,7 +58,7 @@ function showRequests(index){
                                         <p>:</p>
                                     </div>
                                 </div>
-                                <p>${loggedIn.order[i].weight} Grams</p>
+                                <p>${weightText} Grams</p>
                             </div>
                             <div class="list-content">
                                 <div>
@@ -108,7 +108,7 @@ function showRequests(index){
                                         <p>:</p>
                                     </div>
                                 </div>
-                                <p>${loggedIn.order[i].weight} Grams</p>
+                                <p>${weightText} Grams</p>
                             </div>
                             <div class="list-content">
                                 <div>
@@ -143,7 +143,6 @@ function showRequests(index){
     if(totalOrderStatus == 0){
         userOrderList.innerHTML = `<div style="margin-left: 4vw; font-weight: bolder"> There is no "${statusText}" recycle order</div>`;
     }
-    console.log(userOrderList);
     return;
 }
 

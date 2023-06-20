@@ -33,7 +33,8 @@ if(localStorage.getItem("userLogin")){
     }
     else{
         document.getElementById('admin').style.display = "none";
-        document.getElementById("coin_value").innerHTML = loggedIn.point;
+        let currentPoint = loggedIn.historyPoint.toLocaleString("id");
+        document.getElementById("coin_value").innerHTML = currentPoint;
     }
 }
 

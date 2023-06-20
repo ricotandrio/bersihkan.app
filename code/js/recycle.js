@@ -17,7 +17,7 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     event.preventDefault();
     const place = document.getElementById('address').value;
     const userDate = document.getElementById('date').value;
-    const weight = document.getElementById('weight').value;
+    let weight = document.getElementById('weight').value;
     const notes = document.getElementById('notes').value;
     const check = document.getElementById('checkbox').checked;
 
@@ -44,6 +44,7 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     if(compareDate < date) progress = "confirmation";
     else progress = "process";
 
+    weight = Number(weight);
     loggedIn.order.push({"pointPlus": weight, "place": place, "date": userDate, "weight": weight, "notes": notes, "progress": progress});
     if(!localStorage.getItem('order_data')){
         var orderData = [];
