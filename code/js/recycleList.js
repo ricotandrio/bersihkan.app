@@ -157,7 +157,7 @@ function cancelOrder(index){
         }
     }
 
-    loggedIn.order[index].progress = "declined";
+    loggedIn.order.splice(index, 1);
     for (let i = 0; i < userData.length; i++) {
         if(loggedIn.email == userData[i].email){
             userData[i].order = loggedIn.order;

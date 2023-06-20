@@ -21,7 +21,10 @@ function showRequests(){
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
-                                <h2>${requestOrder[i].date}</h2>
+                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Weight: ${requestOrder[i].weight} Grams</h2>
+                                <h2>Location: ${requestOrder[i].place}</h2>
+                                <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
                         </div>
                         <div class="right">
@@ -39,7 +42,10 @@ function showRequests(){
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
-                                <h2>${requestOrder[i].date}</h2>
+                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Weight: ${requestOrder[i].weight} Grams</h2>
+                                <h2>Location: ${requestOrder[i].place}</h2>
+                                <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
                         </div>
                         <div class="right">
@@ -57,7 +63,10 @@ function showRequests(){
                             <img src="../asset/${requestOrder[i].progress}.png" alt="">
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
-                                <h2>${requestOrder[i].date}</h2>
+                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Weight: ${requestOrder[i].weight} Grams</h2>
+                                <h2>Location: ${requestOrder[i].place}</h2>
+                                <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
                         </div>
                         <div class="right">
