@@ -51,13 +51,13 @@ main {
     text-align: center;
 }
 
-.recycle-bar{
+#recycle-bar{
     background-color: grey;
     border-radius: 1vw;
     width: 40vw;
 }
 
-.recycle-bar p{
+#recycle-bar p{
     position: absolute;
     top: 6.8vw;
     left: 42.5vw;
@@ -246,4 +246,3 @@ main {
     padding-bottom: 3vw;
     padding-left: 1vw;
 }
-

@@ -4,7 +4,8 @@ console.log(loggedIn);
 temp.innerHTML = `<h1>Welcome, ${loggedIn.name}</h1>`
 
 var userPoint = document.getElementById('balance');
-userPoint.innerHTML += `<h2>${loggedIn.point} poin</h2>`;
+userPoint.innerHTML += `<h2>${loggedIn.historyPoint} point</h2>`;
+document.getElementById("recycle-bar").innerHTML += `<p>Recycle x${loggedIn.recycle}</p>`;
 
 document.getElementById("recycle2").addEventListener("click", function(){
     window.location.href = "../html/recycle.html";
@@ -63,4 +64,4 @@ counter();
 
 document.getElementById("request_user").addEventListener("click", function(){
     window.location.href = "./recycle-list.html";
-})
+});

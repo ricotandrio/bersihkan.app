@@ -5,14 +5,6 @@ document.getElementById('register-form').addEventListener('submit', (event) => {
     var nama = document.getElementById('nama').value;
     var email = document.getElementById('email2').value;
     var pass = document.getElementById('pass2').value;
-    var user = {
-        "name": nama,
-        "email": email,
-        "password": pass,
-        "point": 1000,
-        "order": []
-    };
-
     var temp_user_data = JSON.parse(data_user_storage);
     for(let i = 0; i < temp_user_data.length; i++){
         if(temp_user_data[i].email === email){
@@ -21,7 +13,16 @@ document.getElementById('register-form').addEventListener('submit', (event) => {
         }
     }
 
-    temp_user_data.push({ "name": nama, "email": email, "password": pass, "point": 1000, "order": []});
+    var user = {
+        "name": nama,
+        "email": email,
+        "password": pass,
+        "point": 1000,
+        "recycle": 0,
+        "historyPoint": 1000,
+        "order": []
+    };
+    temp_user_data.push(user);
     localStorage.setItem('user_data', JSON.stringify(temp_user_data));
     localStorage.setItem('userLogin', JSON.stringify(user));
     alert("Register Success");

@@ -89,6 +89,8 @@ function checkType(index){
                 if(userData[i].order[j].date == requestOrder[index].date && userData[i].order[j].place == requestOrder[index].place && userData[i].order[j].weight == requestOrder[index].weight && userData[i].order[j].notes == requestOrder[index].notes){
                     userData[i].point += Number(userData[i].order[j].pointPlus);
                     userData[i].order[j].progress = "done";
+                    userData[i].historyPoint += Number(userData[i].order[j].pointPlus);
+                    userData[i].recycle += 1;
                     localStorage.setItem('user_data', JSON.stringify(userData));
                     localStorage.setItem('order_data', JSON.stringify(requestOrder));
                     console.log("Name: " + userData[i].name);
