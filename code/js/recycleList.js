@@ -11,6 +11,7 @@ function showRequests(index){
     var declinedType = 0;
     var statusText = "";
     var status = "";
+    var totalOrderStatus = 0;
     if(index == 0){
         status = "confirmation";
         statusText = "Need Confirmation";
@@ -75,6 +76,7 @@ function showRequests(index){
                             <h1 id="requestType">${statusText}</h1>
                         </div>
                     </div>`;
+                totalOrderStatus += 1;        
         } else if(status == loggedIn.order[i].progress){
             temp += `<div class="list-box ${loggedIn.order[i].progress}">
                         <div class="left-div">
@@ -125,6 +127,7 @@ function showRequests(index){
                             <button id="decline_btn" onclick="cancelOrder(${i})">Cancel</button>
                         </div>
                     </div>`;
+            totalOrderStatus += 1;     
         }
         if(loggedIn.order[i].progress == "process") processType += 1;
         else if(loggedIn.order[i].progress == "confirmation") needConfirmType += 1;
@@ -137,6 +140,9 @@ function showRequests(index){
     document.getElementById("done_num").innerHTML = doneType;
     document.getElementById("declined_num").innerHTML = declinedType;
     userOrderList.innerHTML = temp;
+    if(totalOrderStatus == 0){
+        userOrderList.innerHTML = `<div style="margin-left: 4vw; font-weight: bolder"> There is no "${statusText}" recycle order</div>`;
+    }
     console.log(userOrderList);
     return;
 }
