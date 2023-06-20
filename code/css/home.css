@@ -478,6 +478,54 @@ input[type="radio"]:checked~ {
     margin-bottom: 0.9em;
 }
 
+.card_garbage_container {
+    width: 100% - 5vw;
+    display: flex;
+    padding-bottom: 5vw;
+    flex-direction: column;
+    gap: 2vw;
+    padding-left: 5vw;
+}
+
+.garbage {
+    position: relative;
+    width: 20%;
+}
+
+.image_garbage {
+    width: 100%;
+    height: 20vw;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+}
+
+.image_garbage img {
+    width: 100%;
+    height: 100%;
+}
+
+.text_image {
+    position: absolute;
+    width: 200%;
+    display: none;
+    top: 0;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+    z-index: -1;
+}
+
+.text_image p {
+    padding: 1em;
+    margin: 0;
+}
+
+.text_image h3 {
+    padding-left: 1.5vw;
+}
+
+.image_garbage:hover ~ .text_image {
+    left: 120%;
+    display: block;
+}
+
 @media all and (max-width: 768px){
     :root {
         font-size: 14px;
