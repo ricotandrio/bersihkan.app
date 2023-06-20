@@ -1,6 +1,18 @@
 var loggedIn = JSON.parse(localStorage.getItem("userLogin"));
 var temp = document.getElementById('recycle-list-container');
 
+let date = new Date();
+let curDate = date.getDate();
+let curMonth = date.getMonth() + 1;
+
+if(curDate < 10) curDate = '0' + curDate;
+if(curMonth < 10) curMonth = '0' + curMonth;
+
+let curYear = date.getUTCFullYear();
+let currentDate = document.getElementById("date");
+currentDate.setAttribute("min", `${curYear}-${curMonth}-${curDate}`);
+
+console.log("Total User Order: " + loggedIn.order.length);
 document.getElementById('recycle-form').addEventListener('submit', (event) => {
     event.preventDefault();
     const place = document.getElementById('address').value;
@@ -56,67 +68,3 @@ document.getElementById('recycle-form').addEventListener('submit', (event) => {
     alert("Wait for Admin Confirmation");
     return;
 });
-
-console.log("Total User Order: " + loggedIn.order.length);
-
-function cancelOrder(index){
-    var orderList = JSON.parse(localStorage.getItem("order_data"));
-    for (let i = 0; i < orderList.length; i++) {
-        if(orderList[i].date == loggedIn.order[index].date && orderList[i].place == loggedIn.order[index].place && orderList[i].weight === loggedIn.order[index].weight){
-            orderList.splice(i, 1);
-            localStorage.setItem('order_data', JSON.stringify(orderList));
-            break;
-        }
-    }
-
-    loggedIn.order.splice(index, 1);
-    let userData = JSON.parse(localStorage.getItem('user_data'));
-    for (let i = 0; i < userData.length; i++) {
-        if(loggedIn.email == userData[i].email){
-            userData[i].order = loggedIn.order;
-            localStorage.setItem('userLogin', JSON.stringify(loggedIn));
-            localStorage.setItem('user_data', JSON.stringify(userData));
-            break;
-        }
-    }
-    temp.innerHTML = "";
-    showList();
-    return;
-}
-
-function showList(){
-    if(loggedIn.order.length != 0){
-        document.getElementById('no-order-list').style.display = "none";
-        for (let i = 0; i < loggedIn.order.length; i++) {
-            temp.innerHTML += `<div class="recycle-list">
-                                    <div class="information">${loggedIn.order[i].date}</div>
-                                    <div class="information">${loggedIn.order[i].place}</div>
-                                    <div class="information">${loggedIn.order[i].weight} kg</div>
-                                    <div class="information">${loggedIn.order[i].notes}</div>
-                                    <button onclick="cancelOrder(${i})">Cancel</button>
-                                </div>`
-        }
-    } else{
-        document.getElementById('no-order-list').style.display = "block";
-    }
-}
-
-showList();
-
-let date = new Date();
-let curDate = date.getDate();
-let curMonth = date.getMonth() + 1;
-
-if(curDate < 10) curDate = '0' + curDate;
-if(curMonth < 10) curMonth = '0' + curMonth;
-
-let curYear = date.getUTCFullYear();
-let currentDate = document.getElementById("date");
-
-function removeIframe(){
-    if(document.getElementById("iframe").style.display == "none"){
-        document.getElementById("iframe").style.display = "block";
-    } else {
-        document.getElementById("iframe").style.display = "none";
-    }
-}
