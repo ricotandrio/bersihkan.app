@@ -16,6 +16,8 @@ function showRequests(){
     console.log(requestOrder[0]);
     for(let i = 0; i < requestOrder.length; i++){
         let weightText = requestOrder[i].weight.toLocaleString("id");
+        let dateFormat = new Date(requestOrder[i].date);
+        let formattedDate = dateFormat.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' });
         if(requestOrder[i].progress == "confirmation"){
             temp += `<div class="request ${requestOrder[i].progress}">
                         <div class="left">
@@ -23,7 +25,7 @@ function showRequests(){
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
                                 <h2>Location: ${requestOrder[i].place}</h2>
-                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Date: ${formattedDate}</h2>
                                 <h2>Weight: ${weightText} Grams</h2>
                                 <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
@@ -44,7 +46,7 @@ function showRequests(){
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
                                 <h2>Location: ${requestOrder[i].place}</h2>
-                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Date: ${formattedDate}</h2>
                                 <h2>Weight: ${weightText} Grams</h2>
                                 <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>
@@ -65,7 +67,7 @@ function showRequests(){
                             <div class="data_user">
                                 <h1>${requestOrder[i].email}</h1>
                                 <h2>Location: ${requestOrder[i].place}</h2>
-                                <h2>Date: ${requestOrder[i].date}</h2>
+                                <h2>Date: ${formattedDate}</h2>
                                 <h2>Weight: ${weightText} Grams</h2>
                                 <h2>Notes: ${requestOrder[i].notes}</h2>
                             </div>

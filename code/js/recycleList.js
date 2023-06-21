@@ -27,6 +27,8 @@ function showRequests(index){
     }
     for(let i = 0; i < loggedIn.order.length; i++){
         let weightText = loggedIn.order[i].weight.toLocaleString("id");
+        let dateFormat = new Date(loggedIn.order[i].date);
+        let formattedDate = dateFormat.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' });
         if(status == loggedIn.order[i].progress && index != 1){
             temp += `<div class="list-box ${loggedIn.order[i].progress}">
                         <div class="left-div">
@@ -48,7 +50,7 @@ function showRequests(index){
                                         <p>:</p>
                                     </div>
                                 </div>
-                                <p>${loggedIn.order[i].date}</p>
+                                <p>${formattedDate}</p>
                             </div>
                             <div class="list-content">
                                 <div>
@@ -76,7 +78,7 @@ function showRequests(index){
                             <h1 id="requestType">${statusText}</h1>
                         </div>
                     </div>`;
-                totalOrderStatus += 1;        
+                totalOrderStatus += 1;
         } else if(status == loggedIn.order[i].progress){
             temp += `<div class="list-box ${loggedIn.order[i].progress}">
                         <div class="left-div">
@@ -98,7 +100,7 @@ function showRequests(index){
                                         <p>:</p>
                                     </div>
                                 </div>
-                                <p>${loggedIn.order[i].date}</p>
+                                <p>${formattedDate}</p>
                             </div>
                             <div class="list-content">
                                 <div>
@@ -127,7 +129,7 @@ function showRequests(index){
                             <button id="decline_btn" onclick="cancelOrder(${i})">Cancel</button>
                         </div>
                     </div>`;
-            totalOrderStatus += 1;     
+            totalOrderStatus += 1;
         }
         if(loggedIn.order[i].progress == "process") processType += 1;
         else if(loggedIn.order[i].progress == "confirmation") needConfirmType += 1;
